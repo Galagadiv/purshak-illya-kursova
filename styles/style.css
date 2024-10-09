@@ -5,14 +5,99 @@
 	--white-cl: #ffffff;
 	--poppins-font: "Poppins", sans-serif;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+	margin: 0;
+	color: var(--black-cl);
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+img {
+	display: block;
+}
+
 body {
 	font-family: var(--poppins-font);
 	font-size: 20px;
 	font-weight: 400;
+	letter-spacing: 0em;
+	line-height: 1;
+
+	margin-left: auto;
+	margin-right: auto;
 }
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
 .header {
+	padding: 20px 0;
+	border-bottom: 1px solid var(--black-cl);
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 	.navigation {
-		a {
+		display: flex;
+		align-content: center;
+		margin-left: 450px;
+		margin-right: 42px;
+		ul {
+			display: flex;
+			align-items: center;
+			gap: 50px;
+			a {
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 1.5em;
+			}
+		}
+	}
+	button {
+		display: flex;
+		flex-wrap: nowrap;
+		align-content: center;
+		border-radius: 8px;
+		border: 2px solid var(--green-cl);
+		background-color: var(--white-cl);
+		padding: 16px 32px;
+		gap: 10px;
+		cursor: pointer;
+		transition: color 0.5s ease;
+		transition: background-color 0.5s ease;
+
+		font-family: var(--poppins-font);
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 0em;
+		svg {
+			color: var(--green-cl);
+			transition: color 0.5s ease;
+		}
+	}
+	button:hover {
+		background-color: var(--green-cl);
+		color: var(--white-cl);
+		svg {
 			color: var(--white-cl);
 		}
 	}

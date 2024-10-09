@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<title>Agency website</title>
-		<link rel="stysheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/modern-normalize.css" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,324 +17,350 @@
 	</head>
 	<body>
 		<header class="header">
-			<svg width="46" height="46">
-				<use href="./images/logo.svg"></use>
-			</svg>
-			<nav class="navigation">
-				<ul>
-					<!-- text-transform: capitalize -->
-					<li><a>Home</a></li>
-					<li><a>About</a></li>
-					<li><a>Work</a></li>
-					<li><a>Pricing</a></li>
-					<li><a>Blog</a></li>
-				</ul>
-			</nav>
-			<button>
-				Let's Talk
-				<svg wigth="20" height="20">
-					<use href="./images/arrow.svg"></use>
-				</svg>
-			</button>
+			<div class="container">
+				<a href="./index.html">
+					<svg width="46" height="46">
+						<use href="./images/symbol-defs.svg#icon-logo"></use>
+					</svg>
+				</a>
+				<nav class="navigation">
+					<ul>
+						<!-- text-transform: capitalize -->
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Work</a></li>
+						<li><a href="#">Pricing</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</nav>
+				<button>
+					Let's Talk
+					<!-- Оця стрілка працює як гамно -->
+					<svg width="20" height="20">
+						<use href="./images/symbol-defs.svg#gr-arrow"></use>
+					</svg>
+				</button>
+			</div>
 		</header>
 		<main>
 			<section class="hero">
-				<div>
-					<h2>
-						We design & build custom digital products that help businesses grow
-					</h2>
-					<img
-						src="./images/hero/smaller-img.jpg"
-						alt="team working on a project"
-					/>
-				</div>
+				<div class="container">
+					<div>
+						<h1>
+							We design & build custom digital products that help businesses
+							grow
+						</h1>
+						<img
+							src="./images/hero/smaller-img.jpg"
+							alt="team working on a project"
+						/>
+					</div>
 
-				<div>
-					<p>
-						We help you increase the quality and performance in every possible
-						way. We work closely with small traders providing company increase
-						their sales.
-					</p>
-					<!-- capitalize -->
-					<button>
-						Start A Project
-						<svg wigth="20" height="20">
-							<use href="./images/arrow.svg"></use>
-						</svg>
-					</button>
-					<img src="./images/hero/bigger-img.jpg" alt="team's workplace" />
+					<div>
+						<p>
+							We help you increase the quality and performance in every possible
+							way. We work closely with small traders providing company increase
+							their sales.
+						</p>
+						<!-- capitalize -->
+						<button>
+							Start A Project
+							<svg wigth="20" height="20">
+								<use href="./images/arrow.svg"></use>
+							</svg>
+						</button>
+						<img src="./images/hero/bigger-img.jpg" alt="team's workplace" />
+					</div>
 				</div>
 			</section>
 
 			<section class="achievments">
-				<ul>
-					<li>
-						<h2>214+</h2>
-						<p>Happy Clients</p>
-					</li>
-					<li>
-						<h2>233+</h2>
-						<p>Projects Finished</p>
-					</li>
-					<li>
-						<h2>32+</h2>
-						<p>Our Team</p>
-					</li>
-					<li>
-						<h2>15+</h2>
-						<p>Award Wining</p>
-					</li>
-				</ul>
+				<div class="container">
+					<ul>
+						<li>
+							<h2>214+</h2>
+							<p>Happy Clients</p>
+						</li>
+						<li>
+							<h2>233+</h2>
+							<p>Projects Finished</p>
+						</li>
+						<li>
+							<h2>32+</h2>
+							<p>Our Team</p>
+						</li>
+						<li>
+							<h2>15+</h2>
+							<p>Award Wining</p>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<section class="service">
-				<!-- capitalize -->
-				<h2>Our Service</h2>
-				<ul>
-					<li>
-						<div>
-							<svg width="98" height="98">
-								<use href="./images/service/design.svg"></use>
-							</svg>
-						</div>
-						<h3>Ui Ux Design</h3>
-						<p>
-							UI UX is the design of the way people interact with products and
-							services. It encompasses the look and feel of a product or
-							service.
-						</p>
-					</li>
-					<li>
-						<div>
-							<svg width="98" height="98">
-								<use href="./images/service/dev.svg"></use>
-							</svg>
-						</div>
-						<h3>Development</h3>
-						<p>
-							web development is the process of creating deploying and
-							maintaining websites.
-						</p>
-					</li>
-					<li>
-						<div>
-							<svg width="98" height="98">
-								<use href="./images/service/sub.svg"></use>
-							</svg>
-						</div>
-						<h3>Subscribe Model</h3>
-						<p>
-							Choose the plan that best suits your needs and start using our
-							services today.
-						</p>
-					</li>
-				</ul>
+				<div class="container">
+					<!-- capitalize -->
+					<h2>Our Service</h2>
+					<ul>
+						<li>
+							<div>
+								<svg width="98" height="98">
+									<use href="./images/service/design.svg"></use>
+								</svg>
+							</div>
+							<h3>Ui Ux Design</h3>
+							<p>
+								UI UX is the design of the way people interact with products and
+								services. It encompasses the look and feel of a product or
+								service.
+							</p>
+						</li>
+						<li>
+							<div>
+								<svg width="98" height="98">
+									<use href="./images/service/dev.svg"></use>
+								</svg>
+							</div>
+							<h3>Development</h3>
+							<p>
+								web development is the process of creating deploying and
+								maintaining websites.
+							</p>
+						</li>
+						<li>
+							<div>
+								<svg width="98" height="98">
+									<use href="./images/service/sub.svg"></use>
+								</svg>
+							</div>
+							<h3>Subscribe Model</h3>
+							<p>
+								Choose the plan that best suits your needs and start using our
+								services today.
+							</p>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<section class="projests">
-				<h2>Recent Projects</h2>
-				<!-- перетворити в слайдер -->
-				<ul>
-					<li>
-						<h3>Saas Company Website</h3>
-						<p>The website for xyz saas company website</p>
-						<img
-							src="./images/project/prj-one-el-one.jpg"
-							alt="first screanshot of Saas website"
-						/>
-						<img
-							src="./images/project/prj-one-el-two.jpg"
-							alt="second screanshot of Saas website"
-						/>
-					</li>
+				<div class="container">
+					<h2>Recent Projects</h2>
+					<!-- перетворити в слайдер -->
+					<ul>
+						<li>
+							<h3>Saas Company Website</h3>
+							<p>The website for xyz saas company website</p>
+							<img
+								src="./images/project/prj-one-el-one.jpg"
+								alt="first screanshot of Saas website"
+							/>
+							<img
+								src="./images/project/prj-one-el-two.jpg"
+								alt="second screanshot of Saas website"
+							/>
+						</li>
 
-					<li>
-						<h3>Modern Interior Website</h3>
-						<p>The website for xyz modern interior website</p>
-						<img
-							src="./images/project/prj-two-el-one.jpg"
-							alt="first screanshot of Modern Interior website"
-						/>
-						<img
-							src="./images/project/prj-two-el-two.jpg"
-							alt="second screanshot of Modern Interior website"
-						/>
-					</li>
+						<li>
+							<h3>Modern Interior Website</h3>
+							<p>The website for xyz modern interior website</p>
+							<img
+								src="./images/project/prj-two-el-one.jpg"
+								alt="first screanshot of Modern Interior website"
+							/>
+							<img
+								src="./images/project/prj-two-el-two.jpg"
+								alt="second screanshot of Modern Interior website"
+							/>
+						</li>
 
-					<li>
-						<h3>Gadget Management Dashboard UI Concept</h3>
-						<p>The dashboard for xyz gadget company website</p>
-						<img
-							src="./images/project/prj-three.jpg"
-							alt="Screanshot of UI Concept"
-						/>
-					</li>
-				</ul>
+						<li>
+							<h3>Gadget Management Dashboard UI Concept</h3>
+							<p>The dashboard for xyz gadget company website</p>
+							<img
+								src="./images/project/prj-three.jpg"
+								alt="Screanshot of UI Concept"
+							/>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<section class="aboutUs">
-				<h2>About Us</h2>
-				<p>
-					Creative Concepts was founded in 2010 by two creative entrepreneurs
-					who were passionate about using their skills to help businesses grow.
-					Since then, we have worked with a wide range of clients. We have a
-					proven track record of success, and we are committed to helping our
-					clients achieve their goals.
-				</p>
-				<span>
-					<p>6+ Years of Experience</p>
-					<!-- line between -->
-					<p>230+ Happy Clients</p>
-					<a>
-						More About Us
-						<svg wigth="20" height="20">
-							<use href="./images/arrow.svg"></use>
-						</svg>
-					</a>
-					<img
-						src="./images/aboutUs/teamwork.jpg"
-						alt="Team cross their hands together"
-					/>
-				</span>
+				<div class="container">
+					<h2>About Us</h2>
+					<p>
+						Creative Concepts was founded in 2010 by two creative entrepreneurs
+						who were passionate about using their skills to help businesses
+						grow. Since then, we have worked with a wide range of clients. We
+						have a proven track record of success, and we are committed to
+						helping our clients achieve their goals.
+					</p>
+					<span>
+						<p>6+ Years of Experience</p>
+						<!-- line between -->
+						<p>230+ Happy Clients</p>
+						<a>
+							More About Us
+							<svg wigth="20" height="20">
+								<use href="./images/arrow.svg"></use>
+							</svg>
+						</a>
+						<img
+							src="./images/aboutUs/teamwork.jpg"
+							alt="Team cross their hands together"
+						/>
+					</span>
+				</div>
 			</section>
 
 			<section class="clients">
-				<h2>690+ Happy Clients!</h2>
-				<!-- slider -->
-				<ul>
-					<li>
-						<svg width="80" height="80">
-							<use href="./images/clients/quotes.svg"></use>
-						</svg>
-						<svg width="80" height="80">
-							<use href="./images/clients/quotes.svg"></use>
-						</svg>
-						<p>
-							Cosmic Creations is the best creative agency we've worked with. it
-							is a dream to work with you.
-						</p>
-						<div>
-							<img src="./images/clients/samson.jpg" alt="Samson Michael" />
-							<h3>Samson Michael</h3>
-							<p>CEO at abcdxyz</p>
-						</div>
-					</li>
-
-					<li>
-						<svg width="80" height="80">
-							<use href="./images/clients/quotes.svg"></use>
-						</svg>
-						<svg width="80" height="80">
-							<use href="./images/clients/quotes.svg"></use>
-						</svg>
-						<p>
-							Cosmic Creations created a beautiful and cohesive brand identity
-							for us.
-						</p>
-						<div>
-							<img src="./images/clients/leezang.jpg" alt="Lee Zang" />
-							<h3>Lee Zang</h3>
-							<p>Web Developer</p>
-						</div>
-					</li>
-
-					<li>
-						<svg width="80" height="80">
-							<use href="./images/clients/quotes.svg"></use>
-						</svg>
-						<svg width="80" height="80">
-							<use href="./images/clients/quotes.svg"></use>
-						</svg>
-						<p>
-							I'm so glad we chose Cosmic Creations to help us with our
-							branding.
-						</p>
-						<div>
-							<img src="./images/clients/daniel.jpg" alt="Jerry Daniel" />
-							<h3>Jerry Daniel</h3>
-							<p>Web Developer</p>
-						</div>
-					</li>
-				</ul>
-
-				<!-- slider control btns -->
-				<ul>
-					<li>
-						<button class="btn-left">
-							<svg width="53" height="24">
-								<use href="./images/clients/arrow.svg"></use>
+				<div class="container">
+					<h2>690+ Happy Clients!</h2>
+					<!-- slider -->
+					<ul>
+						<li>
+							<svg width="80" height="80">
+								<use href="./images/clients/quotes.svg"></use>
 							</svg>
-						</button>
-					</li>
-					<li>
-						<button class="btn-right">
-							<svg width="53" height="24">
-								<use href="./images/clients/arrow.svg"></use>
+							<svg width="80" height="80">
+								<use href="./images/clients/quotes.svg"></use>
 							</svg>
-						</button>
-					</li>
-				</ul>
+							<p>
+								Cosmic Creations is the best creative agency we've worked with.
+								it is a dream to work with you.
+							</p>
+							<div>
+								<img src="./images/clients/samson.jpg" alt="Samson Michael" />
+								<h3>Samson Michael</h3>
+								<p>CEO at abcdxyz</p>
+							</div>
+						</li>
+
+						<li>
+							<svg width="80" height="80">
+								<use href="./images/clients/quotes.svg"></use>
+							</svg>
+							<svg width="80" height="80">
+								<use href="./images/clients/quotes.svg"></use>
+							</svg>
+							<p>
+								Cosmic Creations created a beautiful and cohesive brand identity
+								for us.
+							</p>
+							<div>
+								<img src="./images/clients/leezang.jpg" alt="Lee Zang" />
+								<h3>Lee Zang</h3>
+								<p>Web Developer</p>
+							</div>
+						</li>
+
+						<li>
+							<svg width="80" height="80">
+								<use href="./images/clients/quotes.svg"></use>
+							</svg>
+							<svg width="80" height="80">
+								<use href="./images/clients/quotes.svg"></use>
+							</svg>
+							<p>
+								I'm so glad we chose Cosmic Creations to help us with our
+								branding.
+							</p>
+							<div>
+								<img src="./images/clients/daniel.jpg" alt="Jerry Daniel" />
+								<h3>Jerry Daniel</h3>
+								<p>Web Developer</p>
+							</div>
+						</li>
+					</ul>
+
+					<!-- slider control btns -->
+					<ul>
+						<li>
+							<button class="btn-left">
+								<svg width="53" height="24">
+									<use href="./images/clients/arrow.svg"></use>
+								</svg>
+							</button>
+						</li>
+						<li>
+							<button class="btn-right">
+								<svg width="53" height="24">
+									<use href="./images/clients/arrow.svg"></use>
+								</svg>
+							</button>
+						</li>
+					</ul>
+				</div>
 			</section>
 
 			<section class="posts">
-				<h2>Posts</h2>
-				<ul>
-					<li>
-						<img src="./images/posts/dev-post.jpg" alt="Man working on couch" />
-						<p>Development - Feb 21, 2023</p>
-						<h3>Manufacturers who do not know the system.</h3>
-						<a>
-							Read more
-							<svg wigth="10" height="10">
-								<use href="./images/arrow.svg"></use>
-							</svg>
-						</a>
-					</li>
+				<div class="container">
+					<h2>Posts</h2>
+					<ul>
+						<li>
+							<img
+								src="./images/posts/dev-post.jpg"
+								alt="Man working on couch"
+							/>
+							<p>Development - Feb 21, 2023</p>
+							<h3>Manufacturers who do not know the system.</h3>
+							<a>
+								Read more
+								<svg wigth="10" height="10">
+									<use href="./images/arrow.svg"></use>
+								</svg>
+							</a>
+						</li>
 
-					<li>
-						<img
-							src="./images/posts/design-post.jpg"
-							alt="Guys discuss a problem"
-						/>
-						<p>Design - Feb 21, 2023</p>
-						<h3>Choose from the rolling bar.</h3>
-						<a>
-							Read more
-							<svg wigth="10" height="10">
-								<use href="./images/arrow.svg"></use>
-							</svg>
-						</a>
-					</li>
+						<li>
+							<img
+								src="./images/posts/design-post.jpg"
+								alt="Guys discuss a problem"
+							/>
+							<p>Design - Feb 21, 2023</p>
+							<h3>Choose from the rolling bar.</h3>
+							<a>
+								Read more
+								<svg wigth="10" height="10">
+									<use href="./images/arrow.svg"></use>
+								</svg>
+							</a>
+						</li>
 
-					<li>
-						<img
-							src="./images/posts/business.jpg"
-							alt="Man pointing on a paper"
-						/>
-						<p>Business - Feb 21, 2023</p>
-						<h3>This is a method from which it is less easy.</h3>
-						<a>
-							Read more
-							<svg wigth="10" height="10">
-								<use href="./images/arrow.svg"></use>
-							</svg>
-						</a>
-					</li>
-				</ul>
+						<li>
+							<img
+								src="./images/posts/business.jpg"
+								alt="Man pointing on a paper"
+							/>
+							<p>Business - Feb 21, 2023</p>
+							<h3>This is a method from which it is less easy.</h3>
+							<a>
+								Read more
+								<svg wigth="10" height="10">
+									<use href="./images/arrow.svg"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</section>
 
-			<section>
-				<h2>Have a project on your mind? Contact us</h2>
-				<button type="button">
-					Contact Us
-					<svg wigth="24" height="24">
-						<use href="./images/arrow.svg"></use>
-					</svg>
-				</button>
+			<section class="contact">
+				<div class="container">
+					<h2>Have a project on your mind? Contact us</h2>
+					<button type="button">
+						Contact Us
+						<svg wigth="24" height="24">
+							<use href="./images/arrow.svg"></use>
+						</svg>
+					</button>
+				</div>
 			</section>
 		</main>
 		<footer class="fter">
-			<div>
+			<div class="container">
+				>
 				<div>
 					<svg width="74" height="74">
 						<use href="./images/logo.svg"></use>
@@ -372,9 +399,9 @@
 						<li><a href="tel:+251 91 234 5678">+251 91 234 5678</a></li>
 					</ul>
 				</div>
+				<p>Copyright</p>
+				<p>Dawit Tewelde. 2023 All rights reserved.</p>
 			</div>
-			<p>Copyright</p>
-			<p>Dawit Tewelde. 2023 All rights reserved.</p>
 		</footer>
 	</body>
 </html>
