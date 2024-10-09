@@ -1,0 +1,19 @@
+:root {
+	--green-cl: #19ce67;
+	--pink-cl: #ce1980;
+	--black-cl: #000000;
+	--white-cl: #ffffff;
+	--poppins-font: "Poppins", sans-serif;
+}
+body {
+	font-family: var(--poppins-font);
+	font-size: 20px;
+	font-weight: 400;
+}
+.header {
+	.navigation {
+		a {
+			color: var(--white-cl);
+		}
+	}
+}
