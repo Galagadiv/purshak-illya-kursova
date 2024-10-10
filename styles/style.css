@@ -97,34 +97,34 @@ body {
 				color: var(--green-cl);
 			}
 		}
-		button {
-			display: flex;
-			flex-wrap: nowrap;
-			align-content: center;
-			border-radius: 8px;
-			border: 2px solid var(--green-cl);
-			background-color: var(--white-cl);
-			padding: 16px 32px;
-			gap: 10px;
-			cursor: pointer;
-			transition: color 0.5s ease;
-			transition: background-color 0.5s ease;
+	}
+	button {
+		display: flex;
+		flex-wrap: nowrap;
+		align-content: center;
+		border-radius: 8px;
+		border: 2px solid var(--green-cl);
+		background-color: var(--white-cl);
+		padding: 16px 32px;
+		gap: 10px;
+		cursor: pointer;
+		transition: color 0.5s ease;
+		transition: background-color 0.5s ease;
 
-			font-family: var(--poppins-font);
-			font-size: 18px;
-			font-weight: 400;
-			letter-spacing: 0em;
-			svg {
-				color: var(--green-cl);
-				transition: color 0.5s ease;
-			}
+		font-family: var(--poppins-font);
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 0em;
+		svg {
+			color: var(--green-cl);
+			transition: color 0.5s ease;
 		}
-		button:hover {
-			background-color: var(--green-cl);
+	}
+	button:hover {
+		background-color: var(--green-cl);
+		color: var(--white-cl);
+		svg {
 			color: var(--white-cl);
-			svg {
-				color: var(--white-cl);
-			}
 		}
 	}
 }
