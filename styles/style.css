@@ -56,6 +56,10 @@ body {
 		justify-content: space-between;
 		align-items: center;
 	}
+	.logo:hover {
+		transition: transform 0.5s ease-out;
+		transform: rotate(360deg);
+	}
 	.navigation {
 		display: flex;
 		align-content: center;
@@ -66,39 +70,61 @@ body {
 			align-items: center;
 			gap: 50px;
 			a {
+				position: relative;
 				font-weight: 700;
 				font-size: 18px;
 				line-height: 1.5em;
+				transition: color 0.5s ease;
+			}
+
+			a:hover {
+				color: var(--green-cl);
+			}
+
+			a::after {
+				content: "^";
+				display: block;
+				width: 30%;
+				height: 4px;
+				color: var(--white-cl);
+				position: absolute;
+				bottom: 0px;
+				transform: translateX(125%);
+				transition: color 0.5s ease;
+			}
+
+			a:hover::after {
+				color: var(--green-cl);
 			}
 		}
-	}
-	button {
-		display: flex;
-		flex-wrap: nowrap;
-		align-content: center;
-		border-radius: 8px;
-		border: 2px solid var(--green-cl);
-		background-color: var(--white-cl);
-		padding: 16px 32px;
-		gap: 10px;
-		cursor: pointer;
-		transition: color 0.5s ease;
-		transition: background-color 0.5s ease;
-
-		font-family: var(--poppins-font);
-		font-size: 18px;
-		font-weight: 400;
-		letter-spacing: 0em;
-		svg {
-			color: var(--green-cl);
+		button {
+			display: flex;
+			flex-wrap: nowrap;
+			align-content: center;
+			border-radius: 8px;
+			border: 2px solid var(--green-cl);
+			background-color: var(--white-cl);
+			padding: 16px 32px;
+			gap: 10px;
+			cursor: pointer;
 			transition: color 0.5s ease;
+			transition: background-color 0.5s ease;
+
+			font-family: var(--poppins-font);
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 0em;
+			svg {
+				color: var(--green-cl);
+				transition: color 0.5s ease;
+			}
 		}
-	}
-	button:hover {
-		background-color: var(--green-cl);
-		color: var(--white-cl);
-		svg {
+		button:hover {
+			background-color: var(--green-cl);
 			color: var(--white-cl);
+			svg {
+				color: var(--white-cl);
+			}
 		}
 	}
 }
