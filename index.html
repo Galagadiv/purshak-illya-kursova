@@ -80,6 +80,7 @@
 				</div>
 			</section>
 
+			<!-- Зробити набігання чисел -->
 			<section class="achievments">
 				<div class="container">
 					<ul>
@@ -110,9 +111,12 @@
 					<ul>
 						<li>
 							<div>
-								<svg width="98" height="98">
-									<use href="./images/service/design.svg"></use>
-								</svg>
+								<img
+									width="48"
+									height="48"
+									src="./images/service/design.jpg"
+									alt="Design icon"
+								/>
 							</div>
 							<h3>Ui Ux Design</h3>
 							<p>
@@ -123,21 +127,27 @@
 						</li>
 						<li>
 							<div>
-								<svg width="98" height="98">
-									<use href="./images/service/dev.svg"></use>
-								</svg>
+								<img
+									width="48"
+									height="48"
+									src="./images/service/dev.jpg"
+									alt="Development icon"
+								/>
 							</div>
 							<h3>Development</h3>
 							<p>
-								web development is the process of creating deploying and
+								Web development is the process of creating deploying and
 								maintaining websites.
 							</p>
 						</li>
 						<li>
 							<div>
-								<svg width="98" height="98">
-									<use href="./images/service/sub.svg"></use>
-								</svg>
+								<img
+									width="48"
+									height="48"
+									src="./images/service/sub.jpg"
+									alt="Subscribtion icon"
+								/>
 							</div>
 							<h3>Subscribe Model</h3>
 							<p>
@@ -149,7 +159,7 @@
 				</div>
 			</section>
 
-			<section class="projests">
+			<section class="projects">
 				<div class="container">
 					<h2>Recent Projects</h2>
 					<!-- перетворити в слайдер -->
@@ -157,36 +167,42 @@
 						<li>
 							<h3>Saas Company Website</h3>
 							<p>The website for xyz saas company website</p>
-							<img
-								src="./images/project/prj-one-el-one.jpg"
-								alt="first screanshot of Saas website"
-							/>
-							<img
-								src="./images/project/prj-one-el-two.jpg"
-								alt="second screanshot of Saas website"
-							/>
+							<div class="img-container">
+								<img
+									src="./images/projects/prj-one-el-one.jpg"
+									alt="first screanshot of Saas website"
+								/>
+								<img
+									src="./images/projects/prj-one-el-two.jpg"
+									alt="second screanshot of Saas website"
+								/>
+							</div>
 						</li>
 
 						<li>
 							<h3>Modern Interior Website</h3>
 							<p>The website for xyz modern interior website</p>
-							<img
-								src="./images/project/prj-two-el-one.jpg"
-								alt="first screanshot of Modern Interior website"
-							/>
-							<img
-								src="./images/project/prj-two-el-two.jpg"
-								alt="second screanshot of Modern Interior website"
-							/>
+							<div class="img-container">
+								<img
+									src="./images/projects/prj-two-el-one.jpg"
+									alt="first screanshot of Modern Interior website"
+								/>
+								<img
+									src="./images/projects/prj-two-el-two.jpg"
+									alt="second screanshot of Modern Interior website"
+								/>
+							</div>
 						</li>
 
 						<li>
 							<h3>Gadget Management Dashboard UI Concept</h3>
 							<p>The dashboard for xyz gadget company website</p>
-							<img
-								src="./images/project/prj-three.jpg"
-								alt="Screanshot of UI Concept"
-							/>
+							<div class="img-container">
+								<img
+									src="./images/projects/prj-three.jpg"
+									alt="Screanshot of UI Concept"
+								/>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -194,29 +210,36 @@
 
 			<section class="aboutUs">
 				<div class="container">
-					<h2>About Us</h2>
-					<p>
-						Creative Concepts was founded in 2010 by two creative entrepreneurs
-						who were passionate about using their skills to help businesses
-						grow. Since then, we have worked with a wide range of clients. We
-						have a proven track record of success, and we are committed to
-						helping our clients achieve their goals.
-					</p>
-					<span>
-						<p>6+ Years of Experience</p>
-						<!-- line between -->
-						<p>230+ Happy Clients</p>
+					<div class="txt-cont">
+						<h2>About Us</h2>
+						<p>
+							Creative Concepts was founded in 2010 by two creative
+							entrepreneurs who were passionate about using their skills to help
+							businesses grow. Since then, we have worked with a wide range of
+							clients. We have a proven track record of success, and we are
+							committed to helping our clients achieve their goals.
+						</p>
+						<div class="exp-gr-line">
+							<p>6+ Years of Experience</p>
+							<!-- line between -->
+							<p>230+ Happy Clients</p>
+						</div>
 						<a>
 							More About Us
-							<svg wigth="20" height="20">
-								<use href="./images/arrow.svg"></use>
+							<svg width="20" height="20">
+								<use href="./images/symbol-defs.svg#gr-arrow"></use>
 							</svg>
 						</a>
+					</div>
+
+					<div class="img-cont">
 						<img
-							src="./images/aboutUs/teamwork.jpg"
+							width="495px"
+							height="565px"
+							src="./images/aboutUS.jpg"
 							alt="Team cross their hands together"
 						/>
-					</span>
+					</div>
 				</div>
 			</section>
 
@@ -224,75 +247,97 @@
 				<div class="container">
 					<h2>690+ Happy Clients!</h2>
 					<!-- slider -->
-					<ul>
+					<ul class="quotes">
 						<li>
-							<svg width="80" height="80">
-								<use href="./images/clients/quotes.svg"></use>
-							</svg>
-							<svg width="80" height="80">
-								<use href="./images/clients/quotes.svg"></use>
-							</svg>
+							<div class="quote-img-cont">
+								<svg width="28" height="47">
+									<use href="./images/clients/quote.svg"></use>
+								</svg>
+								<svg width="28" height="47">
+									<use href="./images/clients/quote.svg"></use>
+								</svg>
+							</div>
 							<p>
 								Cosmic Creations is the best creative agency we've worked with.
 								it is a dream to work with you.
 							</p>
-							<div>
-								<img src="./images/clients/samson.jpg" alt="Samson Michael" />
-								<h3>Samson Michael</h3>
-								<p>CEO at abcdxyz</p>
+							<div class="quote-author">
+								<img
+									width="60"
+									height="60"
+									src="./images/clients/samson.jpg"
+									alt="Samson Michael"
+								/>
+								<ul>
+									<li><h3>Samson Michael</h3></li>
+									<li><p>CEO at abcdxyz</p></li>
+								</ul>
 							</div>
 						</li>
 
 						<li>
-							<svg width="80" height="80">
-								<use href="./images/clients/quotes.svg"></use>
-							</svg>
-							<svg width="80" height="80">
-								<use href="./images/clients/quotes.svg"></use>
-							</svg>
+							<div class="quote-img-cont">
+								<svg width="28" height="47">
+									<use href="./images/clients/quote.svg"></use>
+								</svg>
+								<svg width="28" height="47">
+									<use href="./images/clients/quote.svg"></use>
+								</svg>
+							</div>
 							<p>
 								Cosmic Creations created a beautiful and cohesive brand identity
 								for us.
 							</p>
-							<div>
-								<img src="./images/clients/leezang.jpg" alt="Lee Zang" />
-								<h3>Lee Zang</h3>
-								<p>Web Developer</p>
+							<div class="quote-author">
+								<img
+									width="60"
+									height="60"
+									src="./images/clients/leezang.jpg"
+									alt="Lee Zang"
+								/>
+								<ul>
+									<li><h3>Lee Zang</h3></li>
+									<li><p>Web Developer</p></li>
+								</ul>
 							</div>
 						</li>
 
 						<li>
-							<svg width="80" height="80">
-								<use href="./images/clients/quotes.svg"></use>
-							</svg>
-							<svg width="80" height="80">
-								<use href="./images/clients/quotes.svg"></use>
-							</svg>
+							<div class="quote-img-cont">
+								<svg width="28" height="47">
+									<use href="./images/clients/quote.svg"></use>
+								</svg>
+								<svg width="28" height="47">
+									<use href="./images/clients/quote.svg"></use>
+								</svg>
+							</div>
 							<p>
 								I'm so glad we chose Cosmic Creations to help us with our
 								branding.
 							</p>
-							<div>
+							<div class="quote-author">
 								<img src="./images/clients/daniel.jpg" alt="Jerry Daniel" />
-								<h3>Jerry Daniel</h3>
-								<p>Web Developer</p>
+								<ul>
+									<li><h3>Jerry Daniel</h3></li>
+									<li><p>Web Developer</p></li>
+								</ul>
 							</div>
 						</li>
 					</ul>
 
 					<!-- slider control btns -->
-					<ul>
+					<ul class="slider">
 						<li>
-							<button class="btn-left">
+							<button>
 								<svg width="53" height="24">
-									<use href="./images/clients/arrow.svg"></use>
+									<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
 								</svg>
 							</button>
 						</li>
 						<li>
-							<button class="btn-right">
+							<button>
 								<svg width="53" height="24">
-									<use href="./images/clients/arrow.svg"></use>
+									<use href="./images/symbol-defs.svg#icon-bl-arrwo-r"></use>
 								</svg>
 							</button>
 						</li>
