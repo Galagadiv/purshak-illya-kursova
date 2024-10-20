@@ -268,6 +268,7 @@ body {
 		}
 	}
 }
+/* доробити зображення */
 .projects {
 	padding-top: 140px;
 	h2 {
@@ -275,8 +276,15 @@ body {
 		font-weight: 600;
 		line-height: 1.5em;
 	}
-	ul {
-		display: flex;
+	.slider {
+		display: grid;
+		grid-auto-flow: column;
+		scroll-behavior: auto;
+		overflow-y: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: none;
+
 		gap: 30px;
 		margin-top: 70px;
 		li {
@@ -284,6 +292,8 @@ body {
 			padding: 32px 25px 0 25px;
 			background-color: var(--green-cl);
 			border-radius: 8px;
+
+			scroll-snap-align: start;
 			h3 {
 				font-size: 24px;
 				font-weight: 600;
@@ -303,6 +313,9 @@ body {
 				margin-top: 40px;
 			}
 		}
+	}
+	.slider::-webkit-scrollbar {
+		display: none;
 	}
 }
 .aboutUs {
@@ -396,8 +409,17 @@ body {
 		}
 	}
 }
+/* слайдер через кнопки */
 .clients {
 	margin-top: 140px;
+
+	display: grid;
+	grid-auto-flow: column;
+	scroll-behavior: auto;
+	overflow-y: auto;
+	overscroll-behavior-x: contain;
+	scroll-snap-type: x mandatory;
+	scrollbar-width: none;
 	h2 {
 		font-size: 40px;
 		font-weight: 600;
