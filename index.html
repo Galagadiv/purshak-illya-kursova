@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>Agency website</title>
-		<link rel="stylesheet" href="./styles/style.css" />
-		<link rel="stylesheet" href="./styles/modern-normalize.css" />
+		<link rel="stylesheet" href="./src/css/style.min.css" />
+		<link rel="stylesheet" href="./src/css/modern-normalize.css" />
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -19,57 +19,63 @@
 		<header class="header">
 			<div class="container">
 				<a href="./index.html">
-					<svg width="46" height="46" class="logo">
+					<svg width="46" height="46" class="header__logo">
 						<use href="./images/symbol-defs.svg#icon-logo"></use>
 					</svg>
 				</a>
-				<nav class="navigation">
-					<ul>
+				<nav class="header__nav">
+					<ul class="header__nav__list">
 						<!-- text-transform: capitalize -->
-						<li><a href="./index.html">Home</a></li>
+						<li>
+							<a href="./index.html" class="header__nav__list__link">Home</a>
+						</li>
 						<li>
 							<a
 								href="https://www.figma.com/design/sJgcjqBzWFQ4f5iDQjaYAn/Cosmic-Creations-website-(Community)?node-id=4-2&node-type=frame&t=QMBTpDlI4AVg8b1o-0"
-								>About</a
-							>
+								class="header__nav__list__link"
+								>About
+							</a>
 						</li>
-						<li><a href="#">Work</a></li>
-						<li><a href="#">Pricing</a></li>
-						<li><a href="#">Blog</a></li>
+						<li><a href="#" class="header__nav__list__link">Work</a></li>
+						<li><a href="#" class="header__nav__list__link">Pricing</a></li>
+						<li><a href="#" class="header__nav__list__link">Blog</a></li>
 					</ul>
 				</nav>
-				<button>
-					Let's Talk
-					<!-- Оця стрілка працює як гамно -->
-					<svg width="20" height="20">
-						<use href="./images/symbol-defs.svg#gr-arrow"></use>
-					</svg>
+				<button type="button" class="header__button">
+					<span>
+						Let's Talk
+						<!-- Оця стрілка працює як гамно -->
+						<svg width="20" height="20">
+							<use href="./images/symbol-defs.svg#gr-arrow"></use>
+						</svg>
+					</span>
 				</button>
 			</div>
 		</header>
 		<main>
+			<!-- Розмір зображень дефакто правильний, деюре ні  -->
 			<section class="hero">
 				<div class="container">
-					<div class="hero-column-l">
-						<h1>
+					<div class="hero__container-l">
+						<h1 class="hero__container-l__title">
 							We design & build custom digital products that help businesses
 							grow
 						</h1>
 						<img
-							width="420"
-							height="380"
+							width="419"
+							height="379"
 							src="./images/hero-img-l.jpg"
 							alt="team working on a project"
 						/>
 					</div>
 
-					<div class="hero-column-r">
-						<p>
+					<div class="hero__container-r">
+						<p class="hero__container-r__text">
 							We help you increase the quality and performance in every possible
 							way. We work closely with small traders providing company increase
 							their sales.
 						</p>
-						<button>
+						<button class="hero__container-r__button">
 							Start A Project
 							<svg width="20" height="20">
 								<use href="./images/symbol-defs.svg#gr-arrow"></use>
@@ -77,7 +83,7 @@
 						</button>
 						<img
 							width="600"
-							height="510"
+							height="508"
 							src="./images/hero-img-r.jpg"
 							alt="team's workplace"
 						/>
@@ -88,22 +94,22 @@
 			<!-- Зробити набігання чисел -->
 			<section class="achievments">
 				<div class="container">
-					<ul>
-						<li>
-							<h2>214+</h2>
-							<p>Happy Clients</p>
+					<ul class="achievments__list">
+						<li class="achievments__list__item">
+							<h2 class="achievments__list__item__number">214+</h2>
+							<p class="achievments__list__item__text">Happy Clients</p>
 						</li>
-						<li>
-							<h2>233+</h2>
-							<p>Projects Finished</p>
+						<li class="achievments__list__item">
+							<h2 class="achievments__list__item__number">233+</h2>
+							<p class="achievments__list__item__text">Project Finished</p>
 						</li>
-						<li>
-							<h2>32+</h2>
-							<p>Our Team</p>
+						<li class="achievments__list__item">
+							<h2 class="achievments__list__item__number">32+</h2>
+							<p class="achievments__list__item__text">Our Team</p>
 						</li>
-						<li>
-							<h2>15+</h2>
-							<p>Award Wining</p>
+						<li class="achievments__list__item">
+							<h2 class="achievments__list__item__number">15+</h2>
+							<p class="achievments__list__item__text">Award Wining</p>
 						</li>
 					</ul>
 				</div>
@@ -112,10 +118,10 @@
 			<section class="service">
 				<div class="container">
 					<!-- capitalize -->
-					<h2>Our Service</h2>
-					<ul>
-						<li>
-							<div>
+					<h2 class="service__title">Our Service</h2>
+					<ul class="service__list">
+						<li class="service__list__item">
+							<div class="service__list__item__img-container">
 								<img
 									width="48"
 									height="48"
@@ -123,15 +129,15 @@
 									alt="Design icon"
 								/>
 							</div>
-							<h3>Ui Ux Design</h3>
-							<p>
+							<h3 class="service__list__item__title">Ui Ux Design</h3>
+							<p class="service__list__item__text">
 								UI UX is the design of the way people interact with products and
 								services. It encompasses the look and feel of a product or
 								service.
 							</p>
 						</li>
-						<li>
-							<div>
+						<li class="service__list__item">
+							<div class="service__list__item__img-container">
 								<img
 									width="48"
 									height="48"
@@ -139,14 +145,14 @@
 									alt="Development icon"
 								/>
 							</div>
-							<h3>Development</h3>
-							<p>
+							<h3 class="service__list__item__title">Development</h3>
+							<p class="service__list__item__text">
 								Web development is the process of creating deploying and
 								maintaining websites.
 							</p>
 						</li>
-						<li>
-							<div>
+						<li class="service__list__item">
+							<div class="service__list__item__img-container">
 								<img
 									width="48"
 									height="48"
@@ -154,8 +160,8 @@
 									alt="Subscribtion icon"
 								/>
 							</div>
-							<h3>Subscribe Model</h3>
-							<p>
+							<h3 class="service__list__item__title">Subscribe Model</h3>
+							<p class="service__list__item__text">
 								Choose the plan that best suits your needs and start using our
 								services today.
 							</p>
@@ -164,87 +170,109 @@
 				</div>
 			</section>
 
+			<!-- поремонтувати слайдер -->
 			<section class="projects">
 				<div class="container">
-					<h2>Recent Projects</h2>
+					<h2 class="projects__title">Recent Projects</h2>
 					<!-- перетворити в слайдер -->
-					<ul class="slider">
-						<li>
-							<h3>Saas Company Website</h3>
-							<p>The website for xyz saas company website</p>
-							<div class="img-container">
+					<ul class="projects__slider">
+						<li class="projects__slider__item">
+							<h3 class="projects__slider__item__title">
+								Saas Company Website
+							</h3>
+							<p class="projects__slider__item__text">
+								The website for xyz saas company website
+							</p>
+							<div class="projects__slider__item__img-container">
 								<img
 									src="./images/projects/prj-one-el-one.jpg"
 									alt="first screanshot of Saas website"
+									class="projects__slider__item__img-container__img-one"
 								/>
 								<img
 									src="./images/projects/prj-one-el-two.jpg"
 									alt="second screanshot of Saas website"
+									class="projects__slider__item__img-container__img-two"
 								/>
 							</div>
 						</li>
 
-						<li>
-							<h3>Modern Interior Website</h3>
-							<p>The website for xyz modern interior website</p>
-							<div class="img-container">
+						<li class="projects__slider__item">
+							<h3 class="projects__slider__item__title">
+								Modern Interior Website
+							</h3>
+							<p class="projects__slider__item__text">
+								The website for xyz modern interior website
+							</p>
+							<div class="projects__slider__item__img-container">
 								<img
 									src="./images/projects/prj-two-el-one.jpg"
 									alt="first screanshot of Modern Interior website"
+									class="projects__slider__item__img-container__img-one"
 								/>
 								<img
 									src="./images/projects/prj-two-el-two.jpg"
 									alt="second screanshot of Modern Interior website"
+									class="projects__slider__item__img-container__img-two"
 								/>
 							</div>
 						</li>
 
-						<li>
-							<h3>Gadget Management Dashboard UI Concept</h3>
-							<p>The dashboard for xyz gadget company website</p>
-							<div class="img-container">
+						<li class="projects__slider__item">
+							<h3 class="projects__slider__item__title">
+								Gadget Management Dashboard
+							</h3>
+							<p class="projects__slider__item__text">
+								The dashboard for xyz gadget comp. website
+							</p>
+							<div class="projects__slider__item__img-container">
+								<img
+									src="./images/projects/prj-three.jpg"
+									alt="Screanshot of UI Concept"
+									class="projects__slider__item__img-container__img-solo"
+								/>
+							</div>
+						</li>
+
+						<!-- <li class="projects__slider__item">
+							<h3 class="projects__slider__item__title">
+								Gadget Management Dashboard UI Concept
+							</h3>
+							<p class="projects__slider__item__text">
+								The dashboard for xyz gadget company website
+							</p>
+							<div class="projects__slider__item__img-container">
 								<img
 									src="./images/projects/prj-three.jpg"
 									alt="Screanshot of UI Concept"
 								/>
 							</div>
-						</li>
-
-						<li>
-							<h3>Modern Interior Website</h3>
-							<p>The website for xyz modern interior website</p>
-							<div class="img-container">
-								<img
-									src="./images/projects/prj-two-el-one.jpg"
-									alt="first screanshot of Modern Interior website"
-								/>
-								<img
-									src="./images/projects/prj-two-el-two.jpg"
-									alt="second screanshot of Modern Interior website"
-								/>
-							</div>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</section>
 
 			<section class="aboutUs">
 				<div class="container">
-					<div class="txt-cont">
-						<h2>About Us</h2>
-						<p>
+					<div class="aboutUs__txt-container">
+						<h2 class="aboutUs__txt-container__title">About Us</h2>
+						<p class="aboutUs__txt-container__text">
 							Creative Concepts was founded in 2010 by two creative
 							entrepreneurs who were passionate about using their skills to help
 							businesses grow. Since then, we have worked with a wide range of
 							clients. We have a proven track record of success, and we are
 							committed to helping our clients achieve their goals.
 						</p>
-						<div class="exp-gr-line">
-							<p>6+ Years of Experience</p>
-							<!-- line between -->
-							<p>230+ Happy Clients</p>
+						<div class="aboutUs__txt-container__exp-line">
+							<p class="aboutUs__txt-container__exp-line__text">
+								6+ Years of Experience
+							</p>
+							<p class="aboutUs__txt-container__exp-line__text">|</p>
+							<p class="aboutUs__txt-container__exp-line__text">
+								230+ Happy Clients
+							</p>
 						</div>
-						<a>
+						<a class="aboutUs__txt-container__link">
 							More About Us
 							<svg width="20" height="20">
 								<use href="./images/symbol-defs.svg#gr-arrow"></use>
@@ -252,7 +280,7 @@
 						</a>
 					</div>
 
-					<div class="img-cont">
+					<div class="aboutUs__img-container">
 						<img
 							width="495px"
 							height="565px"
@@ -262,26 +290,26 @@
 					</div>
 				</div>
 			</section>
-
+			<!-- пропуск сладера з кнопками -->
 			<section class="clients">
 				<div class="container">
-					<h2>690+ Happy Clients!</h2>
+					<h2 class="clients__title">690+ Happy Clients!</h2>
 					<!-- slider -->
-					<ul class="quotes">
-						<li>
-							<div class="quote-img-cont">
-								<svg width="28" height="47">
-									<use href="./images/clients/quote.svg"></use>
+					<ul class="clients__slider">
+						<li class="clients__slider__item">
+							<div class="clients__slider__item__svg-cont">
+								<svg width="80" height="80">
+									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
-								<svg width="28" height="47">
-									<use href="./images/clients/quote.svg"></use>
+								<svg width="80" height="80">
+									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
 							</div>
-							<p>
+							<p class="clients__slider__item__text">
 								Cosmic Creations is the best creative agency we've worked with.
 								it is a dream to work with you.
 							</p>
-							<div class="quote-author">
+							<div class="clients__slider__item--author">
 								<img
 									width="60"
 									height="60"
@@ -295,20 +323,20 @@
 							</div>
 						</li>
 
-						<li>
-							<div class="quote-img-cont">
-								<svg width="28" height="47">
-									<use href="./images/clients/quote.svg"></use>
+						<li class="clients__slider__item">
+							<div class="clients__slider__item__svg-cont">
+								<svg width="80" height="80">
+									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
-								<svg width="28" height="47">
-									<use href="./images/clients/quote.svg"></use>
+								<svg width="80" height="80">
+									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
 							</div>
-							<p>
+							<p class="clients__slider__item__text">
 								Cosmic Creations created a beautiful and cohesive brand identity
 								for us.
 							</p>
-							<div class="quote-author">
+							<div class="clients__slider__item--author">
 								<img
 									width="60"
 									height="60"
@@ -322,20 +350,20 @@
 							</div>
 						</li>
 
-						<li>
-							<div class="quote-img-cont">
-								<svg width="28" height="47">
-									<use href="./images/clients/quote.svg"></use>
+						<li class="clients__slider__item">
+							<div class="clients__slider__item__svg-cont">
+								<svg width="80" height="80">
+									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
-								<svg width="28" height="47">
-									<use href="./images/clients/quote.svg"></use>
+								<svg width="80" height="80">
+									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
 							</div>
-							<p>
+							<p class="clients__slider__item__text">
 								I'm so glad we chose Cosmic Creations to help us with our
 								branding.
 							</p>
-							<div class="quote-author">
+							<div class="clients__slider__item--author">
 								<img src="./images/clients/daniel.jpg" alt="Jerry Daniel" />
 								<ul>
 									<li><h3>Jerry Daniel</h3></li>
@@ -348,16 +376,16 @@
 					<!-- slider control btns -->
 					<ul class="slider">
 						<li>
-							<button>
-								<svg width="53" height="24">
+							<button id="left" onclick="plusSlides(-1)">
+								<svg width="64" height="64">
 									<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
 								</svg>
 							</button>
 						</li>
 						<li>
-							<button>
-								<svg width="53" height="24">
-									<use href="./images/symbol-defs.svg#icon-bl-arrwo-r"></use>
+							<button id="right" onclick="plusSlides(1)">
+								<svg width="64" height="64">
+									<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
 								</svg>
 							</button>
 						</li>
@@ -367,49 +395,61 @@
 
 			<section class="posts">
 				<div class="container">
-					<h2>Posts</h2>
-					<ul>
+					<h2 class="posts__title">Posts</h2>
+					<ul class="posts__list">
 						<li>
 							<img
+								width="373"
+								height="282"
 								src="./images/posts/dev-post.jpg"
 								alt="Man working on couch"
 							/>
-							<p>Development - Feb 21, 2023</p>
-							<h3>Manufacturers who do not know the system.</h3>
-							<a>
+							<p class="posts__list__item__date">Development - Feb 21, 2023</p>
+							<h3 class="posts__list__item__title">
+								Manufacturers who do not know the system.
+							</h3>
+							<a class="posts__list__item__link">
 								Read more
-								<svg wigth="10" height="10">
-									<use href="./images/arrow.svg"></use>
+								<svg width="10" height="10">
+									<use href="./images/symbol-defs.svg#gr-arrow"></use>
 								</svg>
 							</a>
 						</li>
 
 						<li>
 							<img
+								width="373"
+								height="282"
 								src="./images/posts/design-post.jpg"
 								alt="Guys discuss a problem"
 							/>
-							<p>Design - Feb 21, 2023</p>
-							<h3>Choose from the rolling bar.</h3>
-							<a>
+							<p class="posts__list__item__date">Design - Feb 21, 2023</p>
+							<h3 class="posts__list__item__title">
+								Choose from the rolling bar.
+							</h3>
+							<a class="posts__list__item__link">
 								Read more
-								<svg wigth="10" height="10">
-									<use href="./images/arrow.svg"></use>
+								<svg width="10" height="10">
+									<use href="./images/symbol-defs.svg#gr-arrow"></use>
 								</svg>
 							</a>
 						</li>
 
 						<li>
 							<img
-								src="./images/posts/business.jpg"
+								width="373"
+								height="282"
+								src="./images/posts/business-post.jpg"
 								alt="Man pointing on a paper"
 							/>
-							<p>Business - Feb 21, 2023</p>
-							<h3>This is a method from which it is less easy.</h3>
-							<a>
+							<p class="posts__list__item__date">Business - Feb 21, 2023</p>
+							<h3 class="posts__list__item__title">
+								This is a method from which it is less easy.
+							</h3>
+							<a class="posts__list__item__link">
 								Read more
-								<svg wigth="10" height="10">
-									<use href="./images/arrow.svg"></use>
+								<svg width="10" height="10">
+									<use href="./images/symbol-defs.svg#gr-arrow"></use>
 								</svg>
 							</a>
 						</li>
@@ -419,11 +459,13 @@
 
 			<section class="contact">
 				<div class="container">
-					<h2>Have a project on your mind? Contact us</h2>
-					<button type="button">
+					<h2 class="contact__title">
+						Have a project on your mind? Contact us
+					</h2>
+					<button type="button" class="contact__button">
 						Contact Us
-						<svg wigth="24" height="24">
-							<use href="./images/arrow.svg"></use>
+						<svg width="24" height="24">
+							<use href="./images/symbol-defs.svg#gr-arrow"></use>
 						</svg>
 					</button>
 				</div>
@@ -431,48 +473,136 @@
 		</main>
 		<footer class="fter">
 			<div class="container">
-				>
-				<div>
-					<svg width="74" height="74">
-						<use href="./images/logo.svg"></use>
-					</svg>
-					<p>Cosmic Creations Digital Products Agency in Ethiopia</p>
+				<div class="fter__main">
+					<div class="fter__main__logo-block">
+						<svg width="74" height="74">
+							<use href="./images/symbol-defs.svg#icon-logo"></use>
+						</svg>
+						<p class="fter__main__logo-block__text">
+							Cosmic Creations Digital Products Agency in Ethiopia
+						</p>
+					</div>
+					<div class="fter__lists">
+						<ul class="fter__main__sup-list">
+							<li>
+								<h3 class="fter__main__sup-list__item__title">Support</h3>
+							</li>
+							<li>
+								<a href="#" class="fter__main__sup-list__item__link"
+									>About Us
+								</a>
+							</li>
+							<li>
+								<a href="#" class="fter__main__sup-list__item__link"
+									>Carrers
+								</a>
+							</li>
+							<li>
+								<a href="#" class="fter__main__sup-list__item__link">FAQ </a>
+							</li>
+							<li>
+								<a href="#" class="fter__main__sup-list__item__link"
+									>Privacy Policy
+								</a>
+							</li>
+							<li>
+								<a href="#" class="fter__main__sup-list__item__link">Help </a>
+							</li>
+						</ul>
+
+						<ul class="fter__main__soc-list">
+							<li>
+								<h3 class="fter__main__soc-list__item__title">Social</h3>
+							</li>
+							<li>
+								<a
+									href="https://facebook.com"
+									class="fter__main__soc-list__item__link"
+									>Facebook</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://twitter.com"
+									class="fter__main__soc-list__item__link"
+									>Twitter</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://ua.linkedin.com"
+									class="fter__main__soc-list__item__link"
+									>Linkedin</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://instagram.com"
+									class="fter__main__soc-list__item__link"
+									>Instagram</a
+								>
+							</li>
+						</ul>
+
+						<ul class="fter__cont-block">
+							<li>
+								<h3 class="fter__main__cont-list__item__title">Contact Us</h3>
+							</li>
+							<li>
+								<a
+									href="www.CosmicCreations.com"
+									class="fter__main__cont-list__item__link"
+									>www.CosmicCreations.com
+								</a>
+							</li>
+							<li>
+								<a
+									href="mailto:cosmiccreations@gmail.com"
+									class="fter__main__cont-list__item__link"
+									>cosmiccreations@gmail.com
+								</a>
+							</li>
+							<li>
+								<a
+									href="tel:+251 91 234 5678"
+									class="fter__main__cont-list__item__link"
+									>+251 91 234 5678
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
-
-				<div>
-					<ul>
-						<li><h3>Support</h3></li>
-						<li><a href="#">About Us</a></li>
-						<li><a href="#">Carrers</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Help</a></li>
-					</ul>
-
-					<ul>
-						<li><h3>Social</h3></li>
-						<li><a href="https://facebook.com">Facebook</a></li>
-						<li><a href="https://twitter.com">Twitter</a></li>
-						<li><a href="https://ua.linkedin.com">Linkedin</a></li>
-						<li><a href="https://instagram.com">Instagram</a></li>
-					</ul>
-
-					<ul>
-						<li><h3>Contact Us</h3></li>
-						<li>
-							<a href="www.CosmicCreations.com">www.CosmicCreations.com</a>
-						</li>
-						<li>
-							<a href="mailto:cosmiccreations@gmail.com"
-								>cosmiccreations@gmail.com
-							</a>
-						</li>
-						<li><a href="tel:+251 91 234 5678">+251 91 234 5678</a></li>
-					</ul>
-				</div>
-				<p>Copyright</p>
-				<p>Dawit Tewelde. 2023 All rights reserved.</p>
+				<span class="fter__afterword">
+					<p>Copyright</p>
+					<p>Dawit Tewelde. 2023 All rights reserved.</p>
+				</span>
 			</div>
 		</footer>
+
+		<script>
+			let slideIndex = [1, 1];
+			let slideId = ["mySlides1", "mySlides2"];
+			showSlides(1, 0);
+			showSlides(1, 1);
+
+			function plusSlides(n, no) {
+				showSlides((slideIndex[no] += n), no);
+			}
+
+			function showSlides(n, no) {
+				let i;
+				let x = document.getElementsByClassName(slideId[no]);
+				if (n > x.length) {
+					slideIndex[no] = 1;
+				}
+				if (n < 1) {
+					slideIndex[no] = x.length;
+				}
+				for (i = 0; i < x.length; i++) {
+					x[i].style.display = "none";
+				}
+				x[slideIndex[no] - 1].style.display = "block";
+			}
+		</script>
 	</body>
 </html>

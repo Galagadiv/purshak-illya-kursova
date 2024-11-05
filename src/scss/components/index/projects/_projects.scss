@@ -1,0 +1,77 @@
+.projects {
+	padding-top: 140px;
+	&__title {
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 1.5em;
+	}
+	&__slider {
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+
+		gap: 30px;
+		margin-top: 70px;
+		&__item {
+			min-width: 475px;
+			flex: 0 0 auto;
+
+			padding: 32px 25px 0 25px;
+			background-color: $green-cl;
+			border-radius: 8px;
+
+			scroll-snap-align: start;
+			position: relative;
+			overflow: hidden;
+			&__title {
+				// max-width: 425px;
+				flex-wrap: wrap;
+
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 1.5em;
+				color: $white-cl;
+			}
+			&__text {
+				// max-width: 425px;
+				flex-wrap: wrap;
+
+				margin-top: 10px;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 1.5em;
+				color: $white-cl;
+			}
+			&__img-container {
+				position: relative;
+				display: flex;
+				gap: 8px;
+				margin-top: 40px;
+
+				&__img-one {
+					position: absolute;
+					top: 0;
+				}
+				&__img-two {
+					position: absolute;
+					left: 237px;
+					top: 22px;
+				}
+				&__img-solo {
+					padding-bottom: 28px;
+				}
+			}
+		}
+	}
+	&__slider::-webkit-scrollbar {
+		display: none;
+	}
+}
+.projects::-webkit-scrollbar {
+	display: none;
+}
+// // // scroll-behavior: auto;
+// // overscroll-behavior-x: contain;
+// // scroll-snap-type: x mandatory;
+// // scrollbar-width: none;
+// overflow: visible;

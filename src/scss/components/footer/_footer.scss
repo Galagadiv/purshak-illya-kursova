@@ -1,0 +1,121 @@
+@import "../../variables/varibles";
+
+.fter {
+	.container {
+		// display: flex;
+		padding: 23px 0;
+	}
+
+	&__main {
+		display: flex;
+		align-items: center;
+		&__logo-block {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			max-width: 312px;
+			margin-right: 180px;
+			&__text {
+				display: inline-flex;
+				flex-wrap: wrap;
+				margin-top: 40px;
+				font-family: $poppins-font;
+				color: $green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+			}
+		}
+		&__sup-list {
+			margin-right: 100px;
+			// margin-left: 187px;
+			// min-width: 122px;
+			&__item__title {
+				font-family: $poppins-font;
+				color: $green-cl;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 0em;
+
+				margin-bottom: 23px;
+			}
+			&__item__link {
+				display: inline-flex;
+
+				font-family: $poppins-font;
+				color: $green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+				margin-bottom: 16px;
+				flex-wrap: nowrap;
+			}
+		}
+		&__soc-list {
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+			margin-right: 100px;
+			&__item__title {
+				font-family: $poppins-font;
+				color: $green-cl;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 0em;
+
+				margin-bottom: 23px;
+			}
+			&__item__link {
+				display: inline-flex;
+
+				font-family: $poppins-font;
+				color: $green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+				margin-bottom: 16px;
+				flex-wrap: nowrap;
+			}
+		}
+		&__cont-list {
+			&__item__title {
+				font-family: $poppins-font;
+				color: $green-cl;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 0em;
+
+				margin-bottom: 23px;
+			}
+			&__item__link {
+				display: inline-flex;
+
+				font-family: $poppins-font;
+				color: $green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+				margin-bottom: 16px;
+				flex-wrap: nowrap;
+			}
+		}
+	}
+	&__lists {
+		display: flex;
+		align-items: baseline;
+	}
+	&__afterword {
+		display: flex;
+		gap: 34px;
+		justify-content: center;
+		margin-top: 20px;
+		p {
+			font-family: $poppins-font;
+			color: $green-cl;
+			font-size: 20px;
+			font-weight: 400;
+			letter-spacing: 0em;
+		}
+	}
+}

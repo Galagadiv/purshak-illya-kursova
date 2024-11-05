@@ -1,0 +1,82 @@
+@import "../../variables/varibles";
+@import "../../default/dafault";
+
+.header {
+	padding: 20px 0;
+	border-bottom: 1px solid $black-cl;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo:hover {
+		transition: transform $trans-anim;
+		transform: rotate(360deg);
+	}
+	&__nav {
+		display: flex;
+		align-content: center;
+		margin-left: 450px;
+		margin-right: 42px;
+		&__list {
+			display: flex;
+			// flex-direction: row;
+			align-items: center;
+			gap: 50px;
+			&__link {
+				position: relative;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 1.5em;
+				transition: color $trans-anim;
+				&:hover {
+					color: $green-cl;
+				}
+
+				&::after {
+					content: "^";
+					display: block;
+					width: 30%;
+					height: 4px;
+					color: $white-cl;
+					position: absolute;
+					bottom: 0px;
+					transform: translateX(125%);
+					transition: color $trans-anim;
+				}
+
+				&:hover::after {
+					color: $green-cl;
+				}
+			}
+		}
+	}
+	&__button {
+		display: flex;
+		flex-wrap: nowrap;
+		align-content: center;
+		border-radius: 8px;
+		border: 2px solid $green-cl;
+		background-color: $white-cl;
+		padding: 16px 32px;
+		gap: 10px;
+		transition: color $trans-anim;
+		transition: background-color $trans-anim;
+
+		font-family: $poppins-font;
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 0em;
+		svg {
+			color: $green-cl;
+			transition: color $trans-anim;
+		}
+		&:hover {
+			background-color: $green-cl;
+			color: $white-cl;
+			svg {
+				color: $white-cl;
+			}
+		}
+	}
+}

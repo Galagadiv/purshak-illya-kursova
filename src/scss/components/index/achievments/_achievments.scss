@@ -1,0 +1,28 @@
+@import "../../../variables/varibles";
+
+.achievments {
+	&__list {
+		display: flex;
+		gap: 130px;
+		justify-content: center;
+		&__item {
+			gap: 4px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&__number {
+				font-size: 40px;
+				font-weight: 600;
+				color: $green-cl;
+				line-height: 1.5em;
+				letter-spacing: 0.05em;
+			}
+			&__text {
+				line-height: 1.5em;
+				letter-spacing: 0.001em;
+				text-transform: capitalize;
+				color: $green-cl;
+			}
+		}
+	}
+}
