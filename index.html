@@ -7,6 +7,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+		<!-- <link
+			href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+			rel="stylesheet"
+		/> -->
+		<link rel="stylesheet" href="./src/css/splide.min.css" />
 		<!-- Font Poppins -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -298,14 +303,16 @@
 					</div>
 				</div>
 			</section>
-			<!-- пропуск сладера з кнопками -->
-			<section class="clients">
-				<div class="container">
-					<h2 class="clients__title">690+ Happy Clients!</h2>
-					<!-- slider -->
-					<ul class="clients__slider" id="btn-slider">
-						<li class="clients__slider__item">
-							<div class="clients__slider__item__svg-cont">
+			<section
+				class="splide"
+				aria-label="Splide Basic HTML Example"
+				id="sliderOne"
+			>
+				<div id="target" class="splide__track container">
+					<h2 class="splide__title">690+ Happy Clients!</h2>
+					<ul class="splide__list">
+						<li class="splide__slide">
+							<div class="svg-cont">
 								<svg width="80" height="80">
 									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
@@ -313,11 +320,11 @@
 									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
 							</div>
-							<p class="clients__slider__item__text">
+							<p class="text">
 								Cosmic Creations is the best creative agency we've worked with.
 								it is a dream to work with you.
 							</p>
-							<div class="clients__slider__item--author">
+							<div class="author">
 								<img
 									width="60"
 									height="60"
@@ -331,8 +338,8 @@
 							</div>
 						</li>
 
-						<li class="clients__slider__item">
-							<div class="clients__slider__item__svg-cont">
+						<li class="splide__slide">
+							<div class="svg-cont">
 								<svg width="80" height="80">
 									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
@@ -340,11 +347,11 @@
 									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
 							</div>
-							<p class="clients__slider__item__text">
+							<p class="text">
 								Cosmic Creations created a beautiful and cohesive brand identity
 								for us.
 							</p>
-							<div class="clients__slider__item--author">
+							<div class="author">
 								<img
 									width="60"
 									height="60"
@@ -358,8 +365,8 @@
 							</div>
 						</li>
 
-						<li class="clients__slider__item">
-							<div class="clients__slider__item__svg-cont">
+						<li class="splide__slide">
+							<div class="svg-cont">
 								<svg width="80" height="80">
 									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
@@ -367,11 +374,11 @@
 									<use href="./images/symbol-defs.svg#icon-quote"></use>
 								</svg>
 							</div>
-							<p class="clients__slider__item__text">
+							<p class="text">
 								I'm so glad we chose Cosmic Creations to help us with our
 								branding.
 							</p>
-							<div class="clients__slider__item--author">
+							<div class="author">
 								<img src="./images/clients/daniel.jpg" alt="Jerry Daniel" />
 								<ul>
 									<li><h3>Jerry Daniel</h3></li>
@@ -380,30 +387,22 @@
 							</div>
 						</li>
 					</ul>
+				</div>
 
-					<!-- slider control btns -->
-					<ul class="slider-btn-list">
-						<li>
-							<button
-								id="left"
-								onclick="plusSlides(-1)"
-								class="slider-btn-list__button"
-							>
-								<svg width="64" height="64">
-									<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
-								</svg>
-							</button>
-						</li>
-						<li>
-							<button id="right" onclick="plusSlides(1)">
-								<svg width="64" height="64">
-									<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
-								</svg>
-							</button>
-						</li>
-					</ul>
+				<div class="splide__arrows">
+					<button class="splide__arrow splide__arrow--prev">
+						<svg width="64" height="64">
+							<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
+						</svg>
+					</button>
+					<button class="splide__arrow splide__arrow--next">
+						<svg width="64" height="64">
+							<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
+						</svg>
+					</button>
 				</div>
 			</section>
+			<div><div class="container"></div></div>
 
 			<section class="posts">
 				<div class="container">
@@ -592,30 +591,21 @@
 		</footer>
 
 		<script src="./js/value.js"></script>
-		<!-- <script>
-			let slideIndex = [1, 1];
-			let slideId = ["mySlides1", "mySlides2"];
-			showSlides(1, 0);
-			showSlides(1, 1);
 
-			function plusSlides(n, no) {
-				showSlides((slideIndex[no] += n), no);
-			}
+		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+		<!-- <script src="js/clients-slider.js"></script> -->
+		<script src="js/clients-slider.js"></script>
 
-			function showSlides(n, no) {
-				let i;
-				let x = document.getElementsByClassName(slideId[no]);
-				if (n > x.length) {
-					slideIndex[no] = 1;
-				}
-				if (n < 1) {
-					slideIndex[no] = x.length;
-				}
-				for (i = 0; i < x.length; i++) {
-					x[i].style.display = "none";
-				}
-				x[slideIndex[no] - 1].style.display = "block";
-			}
-		</script> -->
+		<script>
+			// Знаходимо елемент з margin-left: auto
+			const sourceElement = document.querySelector(".container");
+
+			// Знаходимо елемент, якому передаємо відступ
+			const targetElement = document.getElementById("target");
+
+			// Отримуємо значення відступу та застосовуємо його до іншого елемента
+			const computedStyle = window.getComputedStyle(sourceElement);
+			targetElement.style.marginLeft = computedStyle.marginLeft;
+		</script>
 	</body>
 </html>
