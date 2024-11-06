@@ -96,19 +96,27 @@
 				<div class="container">
 					<ul class="achievments__list">
 						<li class="achievments__list__item">
-							<h2 class="achievments__list__item__number">214+</h2>
+							<h2 class="achievments__list__item__number">
+								<span id="value">214</span>+
+							</h2>
 							<p class="achievments__list__item__text">Happy Clients</p>
 						</li>
 						<li class="achievments__list__item">
-							<h2 class="achievments__list__item__number">233+</h2>
+							<h2 class="achievments__list__item__number">
+								<span id="value">233</span>+
+							</h2>
 							<p class="achievments__list__item__text">Project Finished</p>
 						</li>
 						<li class="achievments__list__item">
-							<h2 class="achievments__list__item__number">32+</h2>
+							<h2 class="achievments__list__item__number">
+								<span id="value">32</span>+
+							</h2>
 							<p class="achievments__list__item__text">Our Team</p>
 						</li>
 						<li class="achievments__list__item">
-							<h2 class="achievments__list__item__number">15+</h2>
+							<h2 class="achievments__list__item__number">
+								<span id="value">15</span>+
+							</h2>
 							<p class="achievments__list__item__text">Award Wining</p>
 						</li>
 					</ul>
@@ -295,7 +303,7 @@
 				<div class="container">
 					<h2 class="clients__title">690+ Happy Clients!</h2>
 					<!-- slider -->
-					<ul class="clients__slider">
+					<ul class="clients__slider" id="btn-slider">
 						<li class="clients__slider__item">
 							<div class="clients__slider__item__svg-cont">
 								<svg width="80" height="80">
@@ -374,9 +382,13 @@
 					</ul>
 
 					<!-- slider control btns -->
-					<ul class="slider">
+					<ul class="slider-btn-list">
 						<li>
-							<button id="left" onclick="plusSlides(-1)">
+							<button
+								id="left"
+								onclick="plusSlides(-1)"
+								class="slider-btn-list__button"
+							>
 								<svg width="64" height="64">
 									<use href="./images/symbol-defs.svg#icon-bl-arrwo-l"></use>
 								</svg>
@@ -579,7 +591,8 @@
 			</div>
 		</footer>
 
-		<script>
+		<script src="./js/value.js"></script>
+		<!-- <script>
 			let slideIndex = [1, 1];
 			let slideId = ["mySlides1", "mySlides2"];
 			showSlides(1, 0);
@@ -603,6 +616,6 @@
 				}
 				x[slideIndex[no] - 1].style.display = "block";
 			}
-		</script>
+		</script> -->
 	</body>
 </html>

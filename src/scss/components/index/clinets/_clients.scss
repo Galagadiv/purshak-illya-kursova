@@ -21,6 +21,7 @@
 		margin-top: 60px;
 		gap: 30px;
 		overflow: hidden;
+		width: 100%;
 		&__item {
 			display: flex;
 			flex-direction: column;
@@ -29,7 +30,15 @@
 			border: 1px solid $grey-border-cl;
 			border-radius: 1px;
 			text-align: center;
-			min-width: 460px;
+			flex: 0 0 auto; /* Забезпечує фіксовану ширину елементів */
+			max-width: 460px;
+			width: 100%;
+			// & {
+			// 	display: none; /* Приховуємо всі слайди за замовчуванням */
+			// }
+			// &:first-child {
+			// 	display: flex; /* Показуємо перший слайд за замовчуванням */
+			// }
 			&__svg-cont {
 				display: flex;
 				// gap: -20px;
@@ -64,20 +73,28 @@
 			}
 		}
 	}
-	.slider {
+	.slider-btn-list {
 		display: flex;
 		justify-content: center;
 		flex-direction: row;
 		margin-top: 45px;
 		gap: 30px;
-		li > button {
-			background-color: $white-cl;
+		transition: transform $trans-anim; /* Плавна анімація */
+		overflow: hidden; /* Приховуємо зайві слайди */
+
+		&__button {
+			background: none;
 			border: 0;
 			svg {
 				color: $black-cl;
 			}
+			// &:active {
+			// 	background-color: $green-cl;
+			// }
 		}
 		#right {
+			background: none;
+			border: 0;
 			svg {
 				transform: rotate(180deg);
 			}

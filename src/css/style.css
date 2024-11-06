@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h1,
 h2,
 h3,
@@ -465,6 +466,7 @@ button {
   margin-top: 60px;
   gap: 30px;
   overflow: hidden;
+  width: 100%;
 }
 .clients__slider__item {
   display: flex;
@@ -474,7 +476,9 @@ button {
   border: 1px solid #e4e4e4;
   border-radius: 1px;
   text-align: center;
-  min-width: 460px;
+  flex: 0 0 auto; /* Забезпечує фіксовану ширину елементів */
+  max-width: 460px;
+  width: 100%;
 }
 .clients__slider__item__svg-cont {
   display: flex;
@@ -507,21 +511,27 @@ button {
   font-size: 14px;
   line-height: 1.5em;
 }
-.clients .slider {
+.clients .slider-btn-list {
   display: flex;
   justify-content: center;
   flex-direction: row;
   margin-top: 45px;
   gap: 30px;
+  transition: transform 0.5s ease; /* Плавна анімація */
+  overflow: hidden; /* Приховуємо зайві слайди */
 }
-.clients .slider li > button {
-  background-color: #ffffff;
+.clients .slider-btn-list__button {
+  background: none;
   border: 0;
 }
-.clients .slider li > button svg {
+.clients .slider-btn-list__button svg {
   color: #000000;
 }
-.clients .slider #right svg {
+.clients .slider-btn-list #right {
+  background: none;
+  border: 0;
+}
+.clients .slider-btn-list #right svg {
   transform: rotate(180deg);
 }
 
