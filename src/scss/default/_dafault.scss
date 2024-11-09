@@ -36,11 +36,16 @@ body {
 	margin-right: auto;
 }
 .container {
-	max-width: 1200px;
+	max-width: 428px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: 10px;
-	padding-right: 10px;
+	@include desktop {
+		max-width: 1200px;
+		// margin-left: auto;
+		// margin-right: auto;
+		// padding-left: 10px;
+		// padding-right: 10px;
+	}
 }
 button {
 	cursor: pointer;

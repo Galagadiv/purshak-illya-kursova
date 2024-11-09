@@ -2,6 +2,10 @@
 
 .splide {
 	margin-top: 140px;
+	padding-left: 10px;
+	.empty {
+		border: 0;
+	}
 	&__title {
 		font-size: 40px;
 		font-weight: 600;
@@ -10,7 +14,6 @@
 		margin-bottom: 66px;
 	}
 	.container {
-		// overflow: visible;
 		max-width: max-content;
 	}
 	&__list {

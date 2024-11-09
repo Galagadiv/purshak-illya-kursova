@@ -4,9 +4,12 @@
 	padding: 50px 0;
 	.container {
 		display: flex;
-		align-items: center;
+		@include desktop {
+			align-items: center;
+		}
 	}
 	&__container-l {
+		display: none;
 		margin-right: 85px;
 		&__title {
 			flex-wrap: wrap;
@@ -23,12 +26,13 @@
 		}
 	}
 	&__container-r {
+		display: none;
 		&__text {
 			flex-wrap: wrap;
 			padding-left: 15px;
 
 			font-weight: 400;
-			letter-spacing: 2;
+			// letter-spacing: 2;
 			line-height: 1.5em;
 		}
 		&__button {
@@ -62,6 +66,65 @@
 			margin-top: 85px;
 			border: 15px solid $black-cl;
 			border-radius: 8px;
+		}
+	}
+	&__container-mob {
+		&__title {
+			flex-wrap: wrap;
+			padding-left: 15px;
+			max-width: 333px;
+
+			font-size: 24px;
+			font-weight: 600;
+			letter-spacing: 0.005em;
+			line-height: 1.5em;
+		}
+		&__text {
+			display: flex;
+			flex-wrap: wrap;
+			padding-left: 15px;
+			max-width: 282px;
+
+			font-size: 14px;
+			letter-spacing: 0.01em;
+			font-weight: 400;
+			line-height: 1.3em;
+		}
+		&__button {
+			display: flex;
+			margin-top: 35px;
+			margin-left: 15px;
+			padding: 15px 32px;
+			max-width: 240px;
+			border: 0;
+			border-radius: 8px;
+			background-color: $green-cl;
+			transition: background-color $trans-anim;
+
+			text-transform: capitalize;
+			font-size: 20px;
+			font-family: $poppins-font;
+			font-weight: 600;
+			line-height: 1em;
+			color: $white-cl;
+			&:hover {
+				transition: background-color $trans-anim;
+				background-color: $pink-cl;
+			}
+		}
+		div {
+			display: flex;
+			align-items: baseline;
+			gap: 50px;
+		}
+	}
+	@include desktop {
+		&__container-l,
+		&__container-r {
+			display: block;
+		}
+		&__container-mob {
+			display: none;
 		}
 	}
 }

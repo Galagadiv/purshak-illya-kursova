@@ -46,7 +46,7 @@
 						<li><a href="#" class="header__nav__list__link">Blog</a></li>
 					</ul>
 				</nav>
-				<button type="button" class="header__button">
+				<button type="button" class="header__button" data-modal-close>
 					<span>
 						Let's Talk
 						<!-- Оця стрілка працює як гамно -->
@@ -92,6 +92,37 @@
 							src="./images/hero-img-r.jpg"
 							alt="team's workplace"
 						/>
+					</div>
+					<div class="hero__container-mob">
+						<h1 class="hero__container-mob__title">
+							We design & build custom digital products that help businesses
+							grow
+						</h1>
+						<p class="hero__container-mob__text">
+							We help you increase the quality and performance in every possible
+							way. We work closely with small traders providing company increase
+							their sales.
+						</p>
+						<button class="hero__container-mob__button">
+							Start A Project
+							<svg width="20" height="20">
+								<use href="./images/symbol-defs.svg#gr-arrow"></use>
+							</svg>
+						</button>
+						<div class="hero__container-mob__imgs">
+							<img
+								width="113"
+								height="103"
+								src="./images/hero-img-l.jpg"
+								alt="team working on a project"
+							/>
+							<img
+								width="233"
+								height="170"
+								src="./images/hero-img-r.jpg"
+								alt="team's workplace"
+							/>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -185,7 +216,7 @@
 
 			<!-- поремонтувати слайдер -->
 			<section class="projects">
-				<div class="container">
+				<div class="container" id="project">
 					<h2 class="projects__title">Recent Projects</h2>
 					<!-- перетворити в слайдер -->
 					<ul class="projects__slider">
@@ -303,12 +334,13 @@
 					</div>
 				</div>
 			</section>
+
 			<section
 				class="splide"
 				aria-label="Splide Basic HTML Example"
-				id="sliderOne"
+				id="clientsSliderSection"
 			>
-				<div id="target" class="splide__track container">
+				<div id="client" class="splide__track container">
 					<h2 class="splide__title">690+ Happy Clients!</h2>
 					<ul class="splide__list">
 						<li class="splide__slide">
@@ -386,6 +418,8 @@
 								</ul>
 							</div>
 						</li>
+						<!-- dont exist on tamplate -->
+						<li class="splide__slide empty"></li>
 					</ul>
 				</div>
 
@@ -402,7 +436,6 @@
 					</button>
 				</div>
 			</section>
-			<div><div class="container"></div></div>
 
 			<section class="posts">
 				<div class="container">
@@ -473,7 +506,7 @@
 					<h2 class="contact__title">
 						Have a project on your mind? Contact us
 					</h2>
-					<button type="button" class="contact__button">
+					<button type="button" class="contact__button" data-modal-open>
 						Contact Us
 						<svg width="24" height="24">
 							<use href="./images/symbol-defs.svg#gr-arrow"></use>
@@ -590,22 +623,162 @@
 			</div>
 		</footer>
 
+		<div class="backdrop" data-modal>
+			<div class="backdrop__modal">
+				<button class="backdrop__modal__close-btn" data-modal-cls>
+					&times;
+				</button>
+				<h2 class="backdrop__modal__title">
+					Leave your details, we will call you back
+				</h2>
+				<form class="backdrop__modal__form">
+					<div class="backdrop__modal__form__item">
+						<label for="user_name" class="backdrop__modal__form__item__label"
+							>First Name
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="text"
+								id="user_name"
+								name="name"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+
+							<svg class="backdrop__modal__form__icon" width="12" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img1"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="backdrop__modal__form__item">
+						<label for="user_name" class="backdrop__modal__form__item__label"
+							>Second Name
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="text"
+								id="user_name"
+								name="name"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+
+							<svg class="backdrop__modal__form__icon" width="12" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img1"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="backdrop__modal__form__item">
+						<label
+							for="user_phone_num"
+							class="backdrop__modal__form__item__label"
+							>Телефон
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="tel"
+								id="user_phone_num"
+								name="phone_num"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+							<svg class="backdrop__modal__form__icon" width="13" height="13">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img2"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="backdrop__modal__form__item">
+						<label for="user_mail" class="backdrop__modal__form__item__label"
+							>Пошта
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="email"
+								id="user_mail"
+								name="mail"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+							<svg class="backdrop__modal__form__icon" width="15" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img3"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="backdrop__modal__form__item">
+						<label for="user_comment" class="backdrop__modal__form__item__label"
+							>Опис проєкту
+						</label>
+						<textarea
+							rows="5"
+							placeholder="Коротко опишіть ваш задум"
+							id="user_comment"
+							name="Comment"
+							class="backdrop__modal__form__textarea-container__textarea"
+						></textarea>
+					</div>
+
+					<div class="backdrop__modal__form__agree-line">
+						<input
+							type="checkbox"
+							id="checkbox"
+							class="backdrop__modal__form__agree-line__checkbox"
+							required
+						/>
+						<!-- <span class="custom-checkbox">
+							<svg width="16" height="16">
+								<use href="./images/symbol-defs.svg#icon-checkbox"></use>
+							</svg>
+						</span> -->
+						<label
+							for="checkbox"
+							class="backdrop__modal__form__agree-line__label"
+						>
+							<p class="backdrop__modal__form__agree-line__text">
+								Погоджуюся з розсилкою та приймаю
+							</p>
+						</label>
+						<a href="#" class="backdrop__modal__form__agree-line__link"
+							>Умови договору
+						</a>
+					</div>
+
+					<button type="submit" class="backdrop__modal__form__send-btn">
+						Відправити
+					</button>
+				</form>
+			</div>
+			<!-- <label for="phone-code">Виберіть код країни:</label>
+			<select id="phone-code" name="phone-code" required>
+				<option value="+380">Ukraine (+380)</option>
+				<option value="+1">United States (+1)</option>
+				<option value="+44">United Kingdom (+44)</option>
+				<option value="+49">Germany (+49)</option>
+				<option value="+33">France (+33)</option>
+				<option value="+39">Italy (+39)</option>
+				<option value="+86">China (+86)</option>
+				<option value="+81">Japan (+81)</option>
+				<option value="+91">India (+91)</option>
+			</select> -->
+		</div>
+
+		<script src="./js/form.js"></script>
+
 		<script src="./js/value.js"></script>
 
-		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-		<!-- <script src="js/clients-slider.js"></script> -->
+		<script src="./js/splide.min.js"></script>
+
 		<script src="js/clients-slider.js"></script>
-
-		<script>
-			// Знаходимо елемент з margin-left: auto
-			const sourceElement = document.querySelector(".container");
-
-			// Знаходимо елемент, якому передаємо відступ
-			const targetElement = document.getElementById("target");
-
-			// Отримуємо значення відступу та застосовуємо його до іншого елемента
-			const computedStyle = window.getComputedStyle(sourceElement);
-			targetElement.style.marginLeft = computedStyle.marginLeft;
-		</script>
 	</body>
 </html>

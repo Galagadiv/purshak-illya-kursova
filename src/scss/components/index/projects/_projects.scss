@@ -1,5 +1,9 @@
 .projects {
 	padding-top: 140px;
+	padding-left: 10px;
+	.container {
+		max-width: max-content;
+	}
 	&__title {
 		font-size: 40px;
 		font-weight: 600;
