@@ -39,12 +39,15 @@ body {
 
 .container {
   max-width: 428px;
+  padding: 0 16px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -96,12 +99,15 @@ body {
 
 .container {
   max-width: 428px;
+  padding: 0 16px;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 1440px) {
   .container {
     max-width: 1200px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -188,6 +194,14 @@ section {
 .header__button:hover svg {
   color: #ffffff;
 }
+@media screen and (min-width: 428px) and (max-width: 1439.9px) {
+  .header__nav {
+    display: none;
+  }
+  .header__button {
+    display: none;
+  }
+}
 
 .hero {
   padding: 50px 0;
@@ -257,8 +271,7 @@ section {
 }
 .hero__container-mob__title {
   flex-wrap: wrap;
-  padding-left: 15px;
-  max-width: 333px;
+  margin-bottom: 24px;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 0.005em;
@@ -267,7 +280,6 @@ section {
 .hero__container-mob__text {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 15px;
   max-width: 282px;
   font-size: 14px;
   letter-spacing: 0.01em;
@@ -276,8 +288,8 @@ section {
 }
 .hero__container-mob__button {
   display: flex;
-  margin-top: 35px;
-  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   padding: 15px 32px;
   max-width: 240px;
   border: 0;
@@ -295,10 +307,14 @@ section {
   transition: background-color 0.5s ease;
   background-color: #ce1980;
 }
-.hero__container-mob div {
+.hero__container-mob__imgs {
   display: flex;
   align-items: baseline;
   gap: 50px;
+}
+.hero__container-mob__imgs img {
+  border: 3px solid #000000;
+  border-radius: 8px;
 }
 @media screen and (min-width: 1440px) {
   .hero__container-l, .hero__container-r {
@@ -333,6 +349,30 @@ section {
   text-transform: capitalize;
   color: #19ce67;
 }
+@media screen and (min-width: 428px) and (max-width: 1439.9px) {
+  .achievments__list {
+    gap: 22px;
+  }
+  .achievments__list__item {
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .achievments__list__item__number {
+    font-size: 18px;
+    font-weight: 600;
+    color: #19ce67;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+  }
+  .achievments__list__item__text {
+    font-size: 12px;
+    line-height: 1.3em;
+    text-transform: capitalize;
+    color: #19ce67;
+  }
+}
 
 .service {
   margin-top: 170px;
@@ -341,11 +381,11 @@ section {
   text-align: center;
   font-size: 40px;
   font-weight: 600;
+  margin-bottom: 75px;
 }
 .service__list {
   display: flex;
   justify-content: center;
-  margin-top: 75px;
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -382,10 +422,21 @@ section {
   line-height: 1.5em;
   text-align: center;
 }
+@media screen and (min-width: 428px) and (max-width: 1439.9px) {
+  .service {
+    margin-top: 80px;
+  }
+  .service__title {
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+  .service__list {
+    gap: 24px;
+  }
+}
 
 .projects {
   padding-top: 140px;
-  padding-left: 10px;
 }
 .projects .container {
   max-width: -moz-max-content;
@@ -404,7 +455,8 @@ section {
   margin-top: 70px;
 }
 .projects__slider__item {
-  min-width: 475px;
+  max-width: 475px;
+  width: 100%;
   flex: 0 0 auto;
   padding: 32px 25px 0 25px;
   background-color: #19ce67;
@@ -446,11 +498,26 @@ section {
 .projects__slider__item__img-container__img-solo {
   padding-bottom: 28px;
 }
-.projects__slider::-webkit-scrollbar {
-  display: none;
+@media screen and (min-width: 428px) and (max-width: 1439.9px) {
+  .projects__title {
+    font-size: 24px;
+  }
+  .projects__slider {
+    flex-wrap: wrap;
+  }
+  .projects__slider__item {
+    max-width: 396px;
+    height: 400px;
+  }
+  .projects__slider__item__img-container {
+    gap: 5px;
+  }
+  .projects__slider__item__img-container img {
+    max-width: 190px;
+    width: 100%;
+  }
 }
-
-.projects::-webkit-scrollbar {
+.projects__slider::-webkit-scrollbar {
   display: none;
 }
 
@@ -519,9 +586,85 @@ section {
 .aboutUs__txt-container__link:hover svg {
   color: #ffffff;
 }
-.aboutUs__img-container img {
+.aboutUs__img-desk {
+  display: block;
   border: 15px solid #000000;
   border-radius: 8px;
+}
+.aboutUs__img-mob {
+  display: none;
+  border: 5px solid #000000;
+  border-radius: 8px;
+}
+@media screen and (min-width: 428px) and (max-width: 1439.9px) {
+  .aboutUs {
+    margin-top: 80px;
+  }
+  .aboutUs .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .aboutUs__img-desk {
+    display: none;
+  }
+  .aboutUs__img-mob {
+    display: block;
+  }
+  .aboutUs__text-container {
+    max-width: -moz-max-content;
+    max-width: max-content;
+    width: 100%;
+  }
+  .aboutUs__text-container__text {
+    margin-top: 5px;
+    letter-spacing: 0.1em;
+    line-height: 1.5em;
+  }
+  .aboutUs__text-container__exp-line {
+    display: flex;
+    margin-top: 20px;
+    background-color: #19ce67;
+    border-radius: 8px;
+    padding: 10px 24px;
+    gap: 15px;
+    max-width: 330px;
+    width: 100%;
+  }
+  .aboutUs__text-container__exp-line__text {
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 0;
+    color: #ffffff;
+    line-height: 1.4em;
+  }
+  .aboutUs__text-container__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 30px;
+    margin-top: 40px;
+    max-width: 225px;
+    border: 2px solid #19ce67;
+    border-radius: 8px;
+    color: #19ce67;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .aboutUs__text-container__link svg {
+    color: #19ce67;
+  }
+  .aboutUs__text-container__link:hover {
+    background-color: #ce1980;
+    color: #ffffff;
+    border-color: #ce1980;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+  }
+  .aboutUs__text-container__link:hover svg {
+    color: #ffffff;
+  }
 }
 
 .splide {
@@ -975,4 +1118,15 @@ section {
   font-size: 20px;
   font-weight: 400;
   letter-spacing: 0em;
+}
+@media screen and (min-width: 428px) and (max-width: 1439.9px) {
+  .fter .container {
+    padding: 0 16px;
+  }
+  .fter__main {
+    flex-direction: column;
+  }
+  .fter__lists {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

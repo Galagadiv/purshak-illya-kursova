@@ -79,4 +79,12 @@
 			}
 		}
 	}
+	@include mobile {
+		&__nav {
+			display: none;
+		}
+		&__button {
+			display: none;
+		}
+	}
 }

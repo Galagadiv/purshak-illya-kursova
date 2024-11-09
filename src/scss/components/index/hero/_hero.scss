@@ -71,8 +71,7 @@
 	&__container-mob {
 		&__title {
 			flex-wrap: wrap;
-			padding-left: 15px;
-			max-width: 333px;
+			margin-bottom: 24px;
 
 			font-size: 24px;
 			font-weight: 600;
@@ -82,7 +81,6 @@
 		&__text {
 			display: flex;
 			flex-wrap: wrap;
-			padding-left: 15px;
 			max-width: 282px;
 
 			font-size: 14px;
@@ -92,8 +90,8 @@
 		}
 		&__button {
 			display: flex;
-			margin-top: 35px;
-			margin-left: 15px;
+			margin-top: 10px;
+			margin-bottom: 30px;
 			padding: 15px 32px;
 			max-width: 240px;
 			border: 0;
@@ -112,10 +110,14 @@
 				background-color: $pink-cl;
 			}
 		}
-		div {
+		&__imgs {
 			display: flex;
 			align-items: baseline;
 			gap: 50px;
+			img {
+				border: 3px solid $black-cl;
+				border-radius: 8px;
+			}
 		}
 	}
 	@include desktop {

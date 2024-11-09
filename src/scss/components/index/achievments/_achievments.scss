@@ -24,5 +24,27 @@
 				color: $green-cl;
 			}
 		}
+		@include mobile {
+			gap: 22px;
+			&__item {
+				gap: 4px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				&__number {
+					font-size: 18px;
+					font-weight: 600;
+					color: $green-cl;
+					line-height: 1.5em;
+					letter-spacing: 0.05em;
+				}
+				&__text {
+					font-size: 12px;
+					line-height: 1.3em;
+					text-transform: capitalize;
+					color: $green-cl;
+				}
+			}
+		}
 	}
 }

@@ -118,4 +118,15 @@
 			letter-spacing: 0em;
 		}
 	}
+	@include mobile {
+		.container {
+			padding: 0 16px;
+		}
+		&__main {
+			flex-direction: column;
+		}
+		&__lists {
+			flex-direction: column;
+		}
+	}
 }

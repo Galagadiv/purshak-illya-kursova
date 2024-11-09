@@ -1,6 +1,5 @@
 .projects {
 	padding-top: 140px;
-	padding-left: 10px;
 	.container {
 		max-width: max-content;
 	}
@@ -17,7 +16,8 @@
 		gap: 30px;
 		margin-top: 70px;
 		&__item {
-			min-width: 475px;
+			max-width: 475px;
+			width: 100%;
 			flex: 0 0 auto;
 
 			padding: 32px 25px 0 25px;
@@ -28,7 +28,6 @@
 			position: relative;
 			overflow: hidden;
 			&__title {
-				// max-width: 425px;
 				flex-wrap: wrap;
 
 				font-size: 24px;
@@ -37,7 +36,6 @@
 				color: $white-cl;
 			}
 			&__text {
-				// max-width: 425px;
 				flex-wrap: wrap;
 
 				margin-top: 10px;
@@ -67,15 +65,29 @@
 			}
 		}
 	}
+	@include mobile {
+		// .container {
+		// 	// max-width: none;
+		// }
+		&__title {
+			font-size: 24px;
+		}
+		&__slider {
+			flex-wrap: wrap;
+			&__item {
+				max-width: 396px;
+				height: 400px;
+				&__img-container {
+					gap: 5px;
+					img {
+						max-width: 190px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
 	&__slider::-webkit-scrollbar {
 		display: none;
 	}
 }
-.projects::-webkit-scrollbar {
-	display: none;
-}
-// // // scroll-behavior: auto;
-// // overscroll-behavior-x: contain;
-// // scroll-snap-type: x mandatory;
-// // scrollbar-width: none;
-// overflow: visible;

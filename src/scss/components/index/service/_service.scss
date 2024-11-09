@@ -4,11 +4,12 @@
 		text-align: center;
 		font-size: 40px;
 		font-weight: 600;
+
+		margin-bottom: 75px;
 	}
 	&__list {
 		display: flex;
 		justify-content: center;
-		margin-top: 75px;
 		gap: 30px;
 		flex-wrap: wrap;
 		&__item {
@@ -47,6 +48,16 @@
 				line-height: 1.5em;
 				text-align: center;
 			}
+		}
+	}
+	@include mobile {
+		margin-top: 80px;
+		&__title {
+			margin-bottom: 40px;
+			font-size: 24px;
+		}
+		&__list {
+			gap: 24px;
 		}
 	}
 }
