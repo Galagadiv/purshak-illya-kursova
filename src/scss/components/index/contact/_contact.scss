@@ -8,6 +8,10 @@
 		padding: 80px 0 50px;
 
 		background-color: $green-cl;
+		@include mobile {
+			padding: 40px 39px 50px;
+			border-radius: 8px;
+		}
 	}
 
 	&__title {
@@ -17,9 +21,11 @@
 		letter-spacing: 0.03em;
 		line-height: 1.5em;
 
-		max-width: 720px;
 		flex-wrap: wrap;
 		text-align: center;
+		@include mobile {
+			font-size: 28px;
+		}
 	}
 	&__button {
 		display: flex;
@@ -36,5 +42,8 @@
 		font-size: 24px;
 		font-weight: 400;
 		line-height: 1;
+	}
+	@include mobile {
+		padding: 0 16px;
 	}
 }

@@ -57,6 +57,7 @@
 				</button>
 			</div>
 		</header>
+
 		<main>
 			<!-- Розмір зображень дефакто правильний, деюре ні  -->
 			<section class="hero">
@@ -127,6 +128,7 @@
 				</div>
 			</section>
 
+			<!-- Зробити набігання чисел -->
 			<section class="achievments">
 				<div class="container">
 					<ul class="achievments__list">
@@ -213,8 +215,9 @@
 				</div>
 			</section>
 
+			<!-- поремонтувати слайдер -->
 			<section class="projects">
-				<div class="container">
+				<div class="container" id="project">
 					<h2 class="projects__title">Recent Projects</h2>
 					<!-- перетворити в слайдер -->
 					<ul class="projects__slider">
@@ -291,6 +294,15 @@
 							</div>
 						</li> -->
 					</ul>
+
+					<div class="view__link">
+						<a href="#">
+							View All
+							<svg width="30" height="28">
+								<use href="./images/symbol-defs.svg#gr-arrow"></use>
+							</svg>
+						</a>
+					</div>
 				</div>
 			</section>
 
@@ -303,7 +315,6 @@
 						alt="Team cross their hands together"
 						class="aboutUs__img-mob"
 					/>
-
 					<div class="aboutUs__txt-container">
 						<h2 class="aboutUs__txt-container__title">About Us</h2>
 						<p class="aboutUs__txt-container__text">
@@ -423,8 +434,7 @@
 								</ul>
 							</div>
 						</li>
-						<!-- dont exist on template -->
-						<li class="splide__slide empty"></li>
+						<!-- dont exist on tamplate -->
 					</ul>
 				</div>
 
@@ -440,13 +450,21 @@
 						</svg>
 					</button>
 				</div>
+				<div class="view__link">
+					<a href="#">
+						View All
+						<svg width="30" height="28">
+							<use href="./images/symbol-defs.svg#gr-arrow"></use>
+						</svg>
+					</a>
+				</div>
 			</section>
 
 			<section class="posts">
 				<div class="container">
 					<h2 class="posts__title">Posts</h2>
 					<ul class="posts__list">
-						<li>
+						<li class="posts__list__item">
 							<img
 								width="373"
 								height="282"
@@ -457,7 +475,7 @@
 							<h3 class="posts__list__item__title">
 								Manufacturers who do not know the system.
 							</h3>
-							<a class="posts__list__item__link">
+							<a class="posts__list__item__link" href="#">
 								Read more
 								<svg width="10" height="10">
 									<use href="./images/symbol-defs.svg#gr-arrow"></use>
@@ -465,7 +483,7 @@
 							</a>
 						</li>
 
-						<li>
+						<li class="posts__list__item">
 							<img
 								width="373"
 								height="282"
@@ -476,7 +494,7 @@
 							<h3 class="posts__list__item__title">
 								Choose from the rolling bar.
 							</h3>
-							<a class="posts__list__item__link">
+							<a class="posts__list__item__link" href="#">
 								Read more
 								<svg width="10" height="10">
 									<use href="./images/symbol-defs.svg#gr-arrow"></use>
@@ -484,7 +502,7 @@
 							</a>
 						</li>
 
-						<li>
+						<li class="posts__list__item">
 							<img
 								width="373"
 								height="282"
@@ -495,7 +513,7 @@
 							<h3 class="posts__list__item__title">
 								This is a method from which it is less easy.
 							</h3>
-							<a class="posts__list__item__link">
+							<a class="posts__list__item__link" href="#">
 								Read more
 								<svg width="10" height="10">
 									<use href="./images/symbol-defs.svg#gr-arrow"></use>
@@ -508,9 +526,7 @@
 
 			<section class="contact">
 				<div class="container">
-					<h2 class="contact__title">
-						Have a project on your mind? Contact us
-					</h2>
+					<h2 class="contact__title">Have a project in mind? Contact us</h2>
 					<button type="button" class="contact__button" data-modal-open>
 						Contact Us
 						<svg width="24" height="24">
@@ -520,6 +536,7 @@
 				</div>
 			</section>
 		</main>
+
 		<footer class="fter">
 			<div class="container">
 				<div class="fter__main">
@@ -530,6 +547,10 @@
 						<p class="fter__main__logo-block__text">
 							Cosmic Creations Digital Products Agency in Ethiopia
 						</p>
+						<div class="fter__main__logo-block__text-container">
+							<p class="text-title">Cosmic Creations</p>
+							<p class="text-subtitle">Digital Products Agency in Ethiopia</p>
+						</div>
 					</div>
 					<div class="fter__lists">
 						<ul class="fter__main__sup-list">

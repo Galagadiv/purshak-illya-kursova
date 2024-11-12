@@ -16,6 +16,7 @@
 			justify-content: center;
 			max-width: 312px;
 			margin-right: 180px;
+
 			&__text {
 				display: inline-flex;
 				flex-wrap: wrap;
@@ -26,11 +27,65 @@
 				font-weight: 300;
 				letter-spacing: 0em;
 			}
+			// &__text-title-mob {
+			// 	display: none;
+			// 	flex-wrap: wrap;
+			// 	margin-top: 40px;
+			// 	font-family: $poppins-font;
+			// 	color: $green-cl;
+			// 	letter-spacing: 0em;
+			// 	font-weight: 600;
+			// 	font-size: 28px;
+			// }
+			// &__text-mob {
+			// 	display: none;
+			// 	flex-wrap: wrap;
+			// 	font-family: $poppins-font;
+			// 	color: $green-cl;
+			// 	letter-spacing: 0em;
+			// 	font-size: 18px;
+			// 	color: $green-cl;
+			// 	font-weight: 300;
+			// }
+			&__text-container {
+				display: none;
+				flex-direction: column;
+				margin-top: 40px;
+				gap: 8px;
+
+				.text-title {
+					font-family: $poppins-font;
+					color: $green-cl;
+					letter-spacing: 0em;
+					font-weight: 600;
+					font-size: 28px;
+				}
+
+				.text-subtitle {
+					font-family: $poppins-font;
+					color: $green-cl;
+					letter-spacing: 0em;
+					font-size: 18px;
+					font-weight: 300;
+				}
+			}
+			@include mobile {
+				align-items: flex-start;
+				margin-bottom: 45px;
+				margin-right: 0;
+				svg {
+					display: none;
+				}
+				&__text {
+					display: none;
+				}
+				&__text-container {
+					display: flex;
+				}
+			}
 		}
 		&__sup-list {
 			margin-right: 100px;
-			// margin-left: 187px;
-			// min-width: 122px;
 			&__item__title {
 				font-family: $poppins-font;
 				color: $green-cl;
@@ -124,9 +179,19 @@
 		}
 		&__main {
 			flex-direction: column;
+			align-items: flex-start;
+			// &__logo-block {
+			// }
 		}
 		&__lists {
 			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__afterword {
+			flex-direction: column;
+			gap: 12px;
+			align-items: center;
+			padding-bottom: 20px;
 		}
 	}
 }

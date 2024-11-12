@@ -54,3 +54,19 @@ button {
 section {
 	overflow-x: hidden;
 }
+.view__link {
+	display: none;
+	justify-content: right;
+	margin-top: 20px;
+	a {
+		color: $green-cl;
+		font-size: 24px;
+		line-height: 1.25em;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	@include mobile {
+		display: flex;
+	}
+}
