@@ -79,12 +79,21 @@
 			}
 		}
 	}
+	&__menu-btn {
+		display: none;
+		padding: 0;
+		border: 0;
+		background: none;
+	}
 	@include mobile {
 		&__nav {
 			display: none;
 		}
 		&__button {
 			display: none;
+		}
+		&__menu-btn {
+			display: block;
 		}
 	}
 }

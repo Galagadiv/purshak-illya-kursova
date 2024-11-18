@@ -2,17 +2,15 @@
 <html>
 	<head>
 		<title>Agency website</title>
-		<link rel="stylesheet" href="./src/css/style.min.css" />
+		<link rel="stylesheet" href="./src/css/splide.min.css" />
+		<link rel="stylesheet" href="./src/css/aos.css" />
 		<link rel="stylesheet" href="./src/css/modern-normalize.css" />
+
+		<link rel="stylesheet" href="./src/css/style.min.css" />
+
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- <link
-			href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-			rel="stylesheet"
-		/> -->
-		<link rel="stylesheet" href="./src/css/splide.min.css" />
-		<!-- Font Poppins -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -21,7 +19,7 @@
 		/>
 	</head>
 	<body>
-		<header class="header">
+		<header class="header" data-aos="fade-up" data-aos-duration="2000">
 			<div class="container">
 				<a href="./index.html">
 					<svg width="46" height="46" class="header__logo">
@@ -55,12 +53,16 @@
 						</svg>
 					</span>
 				</button>
+
+				<button class="header__menu-btn" mob-menu-open>
+					<img src="./images/Humbruger.svg" width="32" height="32" />
+				</button>
 			</div>
 		</header>
 
 		<main>
 			<!-- Розмір зображень дефакто правильний, деюре ні  -->
-			<section class="hero">
+			<section class="hero" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container">
 					<div class="hero__container-l">
 						<h1 class="hero__container-l__title">
@@ -129,7 +131,7 @@
 			</section>
 
 			<!-- Зробити набігання чисел -->
-			<section class="achievments">
+			<section class="achievments" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container">
 					<ul class="achievments__list">
 						<li class="achievments__list__item">
@@ -160,7 +162,7 @@
 				</div>
 			</section>
 
-			<section class="service">
+			<section class="service" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container">
 					<!-- capitalize -->
 					<h2 class="service__title">Our Service</h2>
@@ -216,7 +218,7 @@
 			</section>
 
 			<!-- поремонтувати слайдер -->
-			<section class="projects">
+			<section class="projects" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container" id="project">
 					<h2 class="projects__title">Recent Projects</h2>
 					<!-- перетворити в слайдер -->
@@ -306,7 +308,7 @@
 				</div>
 			</section>
 
-			<section class="aboutUs">
+			<section class="aboutUs" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container">
 					<img
 						width="396px"
@@ -355,6 +357,8 @@
 				class="splide"
 				aria-label="Splide Basic HTML Example"
 				id="clientsSliderSection"
+				data-aos="fade-up"
+				data-aos-duration="2000"
 			>
 				<div id="client" class="splide__track container">
 					<h2 class="splide__title">690+ Happy Clients!</h2>
@@ -460,7 +464,7 @@
 				</div>
 			</section>
 
-			<section class="posts">
+			<section class="posts" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container">
 					<h2 class="posts__title">Posts</h2>
 					<ul class="posts__list">
@@ -524,7 +528,7 @@
 				</div>
 			</section>
 
-			<section class="contact">
+			<section class="contact" data-aos="fade-up" data-aos-duration="2000">
 				<div class="container">
 					<h2 class="contact__title">Have a project in mind? Contact us</h2>
 					<button type="button" class="contact__button" data-modal-open>
@@ -537,7 +541,7 @@
 			</section>
 		</main>
 
-		<footer class="fter">
+		<footer class="fter" data-aos="fade-up" data-aos-duration="2000">
 			<div class="container">
 				<div class="fter__main">
 					<div class="fter__main__logo-block">
@@ -649,6 +653,33 @@
 			</div>
 		</footer>
 
+		<div class="mob-menu" mob-menu>
+			<button class="mob-menu__close-btn" mob-menu-close>&times;</button>
+			<nav class="mob-menu__nav">
+				<ul class="mob-menu__nav-list">
+					<li class="mob-menu__nav-list__item">
+						<a href="index.html" class="mob-menu__nav-list__item__link">
+							Home
+						</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="portfolio.html" class="mob-menu__nav-list__item__link">
+							About
+						</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="#" class="mob-menu__nav-list__item__link">Work</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="#" class="mob-menu__nav-list__item__link">Pricing</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="#" class="mob-menu__nav-list__item__link">Blog</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
 		<div class="backdrop" data-modal>
 			<div class="backdrop__modal">
 				<button class="backdrop__modal__close-btn" data-modal-cls>
@@ -700,31 +731,53 @@
 						</div>
 					</div>
 
-					<div class="backdrop__modal__form__item">
-						<label
-							for="user_phone_num"
-							class="backdrop__modal__form__item__label"
-							>Телефон
-						</label>
-						<div class="backdrop__modal__form__input-container">
-							<input
-								type="tel"
-								id="user_phone_num"
-								name="phone_num"
-								class="backdrop__modal__form__input-container__input"
+					<div class="backdrop__modal__form__item phone">
+						<div>
+							<label for="phone-code" class="phone-code-label"
+								>Pick a code:</label
+							>
+							<select
+								id="phone-code"
+								name="phone-code"
+								class="phone-code-list"
 								required
-							/>
-							<svg class="backdrop__modal__form__icon" width="13" height="13">
-								<use
-									href="./images/social/social-icons.svg#icon-modal-img2"
-								></use>
-							</svg>
+							>
+								<option value="+380">UA (+380)</option>
+								<option value="+1">US (+1)</option>
+								<option value="+44">UK (+44)</option>
+								<option value="+49">GR (+49)</option>
+								<option value="+33">FR (+33)</option>
+								<option value="+39">IT (+39)</option>
+								<option value="+86">CH (+86)</option>
+								<option value="+81">JP (+81)</option>
+								<option value="+91">IND (+91)</option>
+							</select>
+						</div>
+						<div class="phone__input-cont">
+							<label
+								for="user_phone_num"
+								class="backdrop__modal__form__item__label"
+								>Phone number
+							</label>
+							<div class="backdrop__modal__form__input-container">
+								<input
+									type="tel"
+									id="user_phone_num"
+									name="phone_num"
+									class="backdrop__modal__form__input-container__input"
+									required
+								/>
+								<svg class="backdrop__modal__form__icon" width="13" height="13">
+									<use
+										href="./images/social/social-icons.svg#icon-modal-img2"
+									></use>
+								</svg>
+							</div>
 						</div>
 					</div>
-
 					<div class="backdrop__modal__form__item">
 						<label for="user_mail" class="backdrop__modal__form__item__label"
-							>Пошта
+							>Email
 						</label>
 						<div class="backdrop__modal__form__input-container">
 							<input
@@ -743,61 +796,40 @@
 					</div>
 
 					<div class="backdrop__modal__form__item">
-						<label for="user_comment" class="backdrop__modal__form__item__label"
-							>Опис проєкту
-						</label>
-						<textarea
-							rows="5"
-							placeholder="Коротко опишіть ваш задум"
-							id="user_comment"
-							name="Comment"
-							class="backdrop__modal__form__textarea-container__textarea"
-						></textarea>
-					</div>
-
-					<div class="backdrop__modal__form__agree-line">
-						<input
-							type="checkbox"
-							id="checkbox"
-							class="backdrop__modal__form__agree-line__checkbox"
-							required
-						/>
-						<!-- <span class="custom-checkbox">
-							<svg width="16" height="16">
-								<use href="./images/symbol-defs.svg#icon-checkbox"></use>
-							</svg>
-						</span> -->
 						<label
-							for="checkbox"
-							class="backdrop__modal__form__agree-line__label"
-						>
-							<p class="backdrop__modal__form__agree-line__text">
-								Погоджуюся з розсилкою та приймаю
-							</p>
+							for="user_phone_num"
+							class="backdrop__modal__form__item__label"
+							>Organisation
 						</label>
-						<a href="#" class="backdrop__modal__form__agree-line__link"
-							>Умови договору
-						</a>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="tel"
+								id="user_phone_num"
+								name="phone_num"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+							<svg class="backdrop__modal__form__icon" width="13" height="13">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img2"
+								></use>
+							</svg>
+						</div>
 					</div>
 
 					<button type="submit" class="backdrop__modal__form__send-btn">
-						Відправити
+						Submit
 					</button>
 				</form>
 			</div>
-			<!-- <label for="phone-code">Виберіть код країни:</label>
-			<select id="phone-code" name="phone-code" required>
-				<option value="+380">Ukraine (+380)</option>
-				<option value="+1">United States (+1)</option>
-				<option value="+44">United Kingdom (+44)</option>
-				<option value="+49">Germany (+49)</option>
-				<option value="+33">France (+33)</option>
-				<option value="+39">Italy (+39)</option>
-				<option value="+86">China (+86)</option>
-				<option value="+81">Japan (+81)</option>
-				<option value="+91">India (+91)</option>
-			</select> -->
 		</div>
+
+		<script src="./js/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+
+		<script src="./js/mob-menu.js"></script>
 
 		<script src="./js/form.js"></script>
 
