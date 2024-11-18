@@ -18,12 +18,10 @@ if (window.innerWidth >= 1440) {
 
 var clientSlider = new Splide("#clientsSliderSection", {
 	type: "slide",
-	perPage: 3,
 	focus: "left",
 	pagination: false,
 	breakpoints: {
-		428: {
-			perPage: 1,
+		400: {
 			arrows: false,
 		},
 	},

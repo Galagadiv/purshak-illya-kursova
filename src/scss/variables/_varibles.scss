@@ -9,7 +9,7 @@ $poppins-font: "Poppins", sans-serif;
 $trans-anim: 0.5s ease;
 
 @mixin mobile {
-	@media screen and (min-width: 428px) and (max-width: 1439.9px) {
+	@media screen and (min-width: 300px) and (max-width: 1439.9px) {
 		@content;
 	}
 }

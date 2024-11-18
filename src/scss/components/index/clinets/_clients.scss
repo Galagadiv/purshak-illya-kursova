@@ -104,4 +104,9 @@
 	&__arrow--next svg {
 		transform: rotate(180deg);
 	}
+	@include mobile {
+		&__arrows {
+			display: none;
+		}
+	}
 }
