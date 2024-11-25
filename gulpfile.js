@@ -1,7 +1,8 @@
 const gulp = require("gulp");
 const fileInclude = require("gulp-file-include");
 const sass = require("gulp-sass")(require("sass"));
-const server = require("gulp-server-livereload");
+const browserSync = require("browser-sync").create();
+
 const clean = require("gulp-clean");
 const fileSys = require("fs");
 const sourceMaps = require("gulp-sourcemaps");
@@ -13,14 +14,20 @@ const fileIncludeSettings = {
 	prefix: "@@",
 	basepath: "@file",
 };
-const severSettings = {
-	livereload: true,
+
+const serverSettings = {
+	server: {
+		baseDir: "./dist",
+	},
+	port: 8000,
 	open: true,
+	notify: false,
 };
+
 const plumberSassConf = {
 	errorHandler: notify.onError({
 		title: "Styles",
-		messege: "Error <%= error.message %>",
+		message: "Error <%= error.message %>",
 		sound: false,
 	}),
 };
@@ -30,6 +37,14 @@ gulp.task("html", function () {
 		.src("./src/**/*.html")
 		.pipe(fileInclude(fileIncludeSettings))
 		.pipe(gulp.dest("./dist"));
+});
+
+gulp.task("js", function () {
+	return gulp.src("./src/js/**/*.js").pipe(gulp.dest("./dist/js"));
+});
+
+gulp.task("css", function () {
+	return gulp.src("./src/css/*.css").pipe(gulp.dest("./dist/css/"));
 });
 
 gulp.task("sass", function () {
@@ -43,12 +58,32 @@ gulp.task("sass", function () {
 });
 
 gulp.task("images", function () {
-	return gulp.src("./images/**/*").pipe(gulp.dest("./dist/images/")); //будь який файл i будь яка папка
+	return gulp
+		.src("./src/images/**/*", {encoding: false})
+		.pipe(gulp.dest("./dist/images/"))
+		.on("data", function (file) {
+			console.log(`${file.path}: ${file.stat.size} bytes`);
+		});
 });
 
 gulp.task("server", function () {
-	return gulp.src("./dist").pipe(server(severSettings));
+	browserSync.init(serverSettings);
+	gulp.watch("./dist/**/*").on("change", browserSync.reload);
 });
+
+// OLD SERVER
+// ------------------------------------------------
+// const server = require("gulp-server-livereload");
+// const severSettings = {
+// 	livereload: true,
+// 	open: true,
+// 	defaultFile: "index.html",
+// 	port: 8080,
+// };
+
+// gulp.task("server", function () {
+// 	return gulp.src("./dist/**/*").pipe(server(severSettings));
+// });
 
 gulp.task("clean", function (done) {
 	return fileSys.existsSync("./dist/")
@@ -66,7 +101,7 @@ gulp.task(
 	"default",
 	gulp.series(
 		"clean",
-		gulp.parallel("html", "sass", "images"),
+		gulp.parallel("html", "sass", "css", "images", "js"),
 		gulp.parallel("server", "watch")
 	)
 );

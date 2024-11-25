@@ -1,16 +1,16 @@
-@import "../variables";
-@import "../dafault";
+@use "../variables" as vars;
+@use "../dafault";
 
 .header {
 	padding: 20px 0;
-	border-bottom: 1px solid $black-cl;
+	border-bottom: 1px solid vars.$black-cl;
 	.container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 	&__logo:hover {
-		transition: transform $trans-anim;
+		transition: transform vars.$trans-anim;
 		transform: rotate(360deg);
 	}
 	&__nav {
@@ -28,9 +28,9 @@
 				font-weight: 700;
 				font-size: 18px;
 				line-height: 1.5em;
-				transition: color $trans-anim;
+				transition: color vars.$trans-anim;
 				&:hover {
-					color: $green-cl;
+					color: vars.$green-cl;
 				}
 
 				&::after {
@@ -38,15 +38,15 @@
 					display: block;
 					width: 30%;
 					height: 4px;
-					color: $white-cl;
+					color: vars.$white-cl;
 					position: absolute;
 					bottom: 0px;
 					transform: translateX(125%);
-					transition: color $trans-anim;
+					transition: color vars.$trans-anim;
 				}
 
 				&:hover::after {
-					color: $green-cl;
+					color: vars.$green-cl;
 				}
 			}
 		}
@@ -56,26 +56,26 @@
 		flex-wrap: nowrap;
 		align-content: center;
 		border-radius: 8px;
-		border: 2px solid $green-cl;
-		background-color: $white-cl;
+		border: 2px solid vars.$green-cl;
+		background-color: vars.$white-cl;
 		padding: 16px 32px;
 		gap: 10px;
-		transition: color $trans-anim;
-		transition: background-color $trans-anim;
+		transition: color vars.$trans-anim;
+		transition: background-color vars.$trans-anim;
 
-		font-family: $poppins-font;
+		font-family: vars.$poppins-font;
 		font-size: 18px;
 		font-weight: 400;
 		letter-spacing: 0em;
 		svg {
-			color: $green-cl;
-			transition: color $trans-anim;
+			color: vars.$green-cl;
+			transition: color vars.$trans-anim;
 		}
 		&:hover {
-			background-color: $green-cl;
-			color: $white-cl;
+			background-color: vars.$green-cl;
+			color: vars.$white-cl;
 			svg {
-				color: $white-cl;
+				color: vars.$white-cl;
 			}
 		}
 	}
@@ -85,7 +85,7 @@
 		border: 0;
 		background: none;
 	}
-	@include mobile {
+	@include vars.mobile {
 		&__nav {
 			display: none;
 		}

@@ -1,4 +1,4 @@
-@import "./variables";
+@use "./variables" as vars;
 
 .achievments {
 	&__list {
@@ -13,7 +13,7 @@
 			&__number {
 				font-size: 40px;
 				font-weight: 600;
-				color: $green-cl;
+				color: vars.$green-cl;
 				line-height: 1.5em;
 				letter-spacing: 0.05em;
 			}
@@ -21,10 +21,10 @@
 				line-height: 1.5em;
 				letter-spacing: 0.001em;
 				text-transform: capitalize;
-				color: $green-cl;
+				color: vars.$green-cl;
 			}
 		}
-		@include mobile {
+		@include vars.mobile {
 			gap: 22px;
 			&__item {
 				gap: 4px;
@@ -34,7 +34,7 @@
 				&__number {
 					font-size: 18px;
 					font-weight: 600;
-					color: $green-cl;
+					color: vars.$green-cl;
 					line-height: 1.5em;
 					letter-spacing: 0.05em;
 				}
@@ -42,7 +42,7 @@
 					font-size: 12px;
 					line-height: 1.3em;
 					text-transform: capitalize;
-					color: $green-cl;
+					color: vars.$green-cl;
 				}
 			}
 		}

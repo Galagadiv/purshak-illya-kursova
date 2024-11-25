@@ -1,7 +1,7 @@
-@import "./variables";
+@use "./variables" as vars;
 
 .aboutUs {
-	background-color: $lt-wh-cl;
+	background-color: vars.$lt-wh-cl;
 	margin-top: 140px;
 	padding: 80px 0;
 	.container {
@@ -25,13 +25,13 @@
 		&__exp-line {
 			display: flex;
 			margin-top: 20px;
-			background-color: $green-cl;
+			background-color: vars.$green-cl;
 			border-radius: 8px;
 			padding: 10px 24px;
 			gap: 25px;
 			&__text {
 				margin-top: 0;
-				color: $white-cl;
+				color: vars.$white-cl;
 				line-height: 1.4em;
 			}
 		}
@@ -44,29 +44,29 @@
 			padding: 14px 30px;
 			margin-top: 40px;
 			max-width: 225px;
-			border: 2px solid $green-cl;
+			border: 2px solid vars.$green-cl;
 			border-radius: 8px;
 
-			color: $green-cl;
-			transition: background-color $trans-anim, color $trans-anim,
-				border-color $trans-anim;
+			color: vars.$green-cl;
+			transition: background-color vars.$trans-anim, color vars.$trans-anim,
+				border-color vars.$trans-anim;
 			cursor: pointer;
 
 			font-size: 18px;
 			font-weight: 400;
 			svg {
-				color: $green-cl;
+				color: vars.$green-cl;
 			}
 			&:hover {
-				background-color: $pink-cl;
-				color: $white-cl;
-				border-color: $pink-cl;
+				background-color: vars.$pink-cl;
+				color: vars.$white-cl;
+				border-color: vars.$pink-cl;
 
-				transition: background-color $trans-anim, color $trans-anim,
-					border-color $trans-anim;
+				transition: background-color vars.$trans-anim, color vars.$trans-anim,
+					border-color vars.$trans-anim;
 
 				svg {
-					color: $white-cl;
+					color: vars.$white-cl;
 				}
 			}
 		}
@@ -74,15 +74,15 @@
 
 	&__img-desk {
 		display: block;
-		border: 15px solid $black-cl;
+		border: 15px solid vars.$black-cl;
 		border-radius: 8px;
 	}
 	&__img-mob {
 		display: none;
-		border: 5px solid $black-cl;
+		border: 5px solid vars.$black-cl;
 		border-radius: 8px;
 	}
-	@include mobile {
+	@include vars.mobile {
 		margin-top: 80px;
 		.container {
 			flex-direction: column;
@@ -105,7 +105,7 @@
 			&__exp-line {
 				display: flex;
 				margin-top: 20px;
-				background-color: $green-cl;
+				background-color: vars.$green-cl;
 				border-radius: 8px;
 				padding: 10px 24px;
 				gap: 15px;
@@ -117,7 +117,7 @@
 					text-align: center;
 
 					margin-top: 0;
-					color: $white-cl;
+					color: vars.$white-cl;
 					line-height: 1.4em;
 				}
 			}
@@ -130,29 +130,29 @@
 				padding: 14px 30px;
 				margin-top: 40px;
 				max-width: 225px;
-				border: 2px solid $green-cl;
+				border: 2px solid vars.$green-cl;
 				border-radius: 8px;
 
-				color: $green-cl;
-				transition: background-color $trans-anim, color $trans-anim,
-					border-color $trans-anim;
+				color: vars.$green-cl;
+				transition: background-color vars.$trans-anim, color vars.$trans-anim,
+					border-color vars.$trans-anim;
 				cursor: pointer;
 
 				font-size: 18px;
 				font-weight: 400;
 				svg {
-					color: $green-cl;
+					color: vars.$green-cl;
 				}
 				&:hover {
-					background-color: $pink-cl;
-					color: $white-cl;
-					border-color: $pink-cl;
+					background-color: vars.$pink-cl;
+					color: vars.$white-cl;
+					border-color: vars.$pink-cl;
 
-					transition: background-color $trans-anim, color $trans-anim,
-						border-color $trans-anim;
+					transition: background-color vars.$trans-anim, color vars.$trans-anim,
+						border-color vars.$trans-anim;
 
 					svg {
-						color: $white-cl;
+						color: vars.$white-cl;
 					}
 				}
 			}

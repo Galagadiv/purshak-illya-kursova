@@ -19,8 +19,12 @@
 		/>
 	</head>
 	<body>
-		@@include('blocks/header.html') @@include('blocks/main/main.html')
-		@@include('blocks/footer.html')
+		<!-- header bulid as one -->
+		@@include('blocks/header/header.html')
+		<!-- //main build as many -->
+		@@include('blocks/main/main.html')
+		<!-- //footer bulid as one -->
+		@@include('blocks/footer/footer.html')
 
 		<div class="mob-menu" mob-menu>
 			<button class="mob-menu__close-btn" mob-menu-close>&times;</button>
@@ -193,19 +197,19 @@
 			</div>
 		</div>
 
-		<script src="./js/aos.js"></script>
+		<script src="../js/aos.js"></script>
 		<script>
 			AOS.init();
 		</script>
 
-		<script src="./js/mob-menu.js"></script>
+		<script src="../js/mob-menu.js"></script>
 
-		<script src="./js/form.js"></script>
+		<script src="../js/form.js"></script>
 
-		<script src="./js/value.js"></script>
+		<script src="../js/value.js"></script>
 
-		<script src="./js/splide.min.js"></script>
+		<script src="../js/splide.min.js"></script>
 
-		<script src="js/clients-slider.js"></script>
+		<script src="../js/clients-slider.js"></script>
 	</body>
 </html>

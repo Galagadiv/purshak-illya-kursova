@@ -1,10 +1,10 @@
-@import "./variables";
+@use "./variables" as vars;
 
 .hero {
 	padding: 50px 0;
 	.container {
 		display: flex;
-		@include desktop {
+		@include vars.desktop {
 			align-items: center;
 		}
 	}
@@ -21,7 +21,7 @@
 		}
 		img {
 			margin-top: 95px;
-			border: 15px solid $black-cl;
+			border: 15px solid vars.$black-cl;
 			border-radius: 8px;
 		}
 	}
@@ -43,28 +43,28 @@
 			max-width: 240px;
 			border: 0;
 			border-radius: 8px;
-			background-color: $green-cl;
-			transition: background-color $trans-anim;
+			background-color: vars.$green-cl;
+			transition: background-color vars.$trans-anim;
 
 			text-transform: capitalize;
 			font-size: 20px;
-			font-family: $poppins-font;
+			font-family: vars.$poppins-font;
 			font-weight: 600;
 			line-height: 1em;
 
-			color: $white-cl;
+			color: vars.$white-cl;
 			svg {
-				color: $white-cl;
+				color: vars.$white-cl;
 				margin-left: 10px;
 			}
 			&:hover {
-				transition: background-color $trans-anim;
-				background-color: $pink-cl;
+				transition: background-color vars.$trans-anim;
+				background-color: vars.$pink-cl;
 			}
 		}
 		img {
 			margin-top: 85px;
-			border: 15px solid $black-cl;
+			border: 15px solid vars.$black-cl;
 			border-radius: 8px;
 		}
 	}
@@ -96,18 +96,18 @@
 			max-width: 240px;
 			border: 0;
 			border-radius: 8px;
-			background-color: $green-cl;
-			transition: background-color $trans-anim;
+			background-color: vars.$green-cl;
+			transition: background-color vars.$trans-anim;
 
 			text-transform: capitalize;
 			font-size: 20px;
-			font-family: $poppins-font;
+			font-family: vars.$poppins-font;
 			font-weight: 600;
 			line-height: 1em;
-			color: $white-cl;
+			color: vars.$white-cl;
 			&:hover {
-				transition: background-color $trans-anim;
-				background-color: $pink-cl;
+				transition: background-color vars.$trans-anim;
+				background-color: vars.$pink-cl;
 			}
 		}
 		&__imgs {
@@ -115,12 +115,12 @@
 			align-items: baseline;
 			justify-content: space-between;
 			img {
-				border: 3px solid $black-cl;
+				border: 3px solid vars.$black-cl;
 				border-radius: 8px;
 			}
 		}
 	}
-	@include desktop {
+	@include vars.desktop {
 		&__container-l,
 		&__container-r {
 			display: block;

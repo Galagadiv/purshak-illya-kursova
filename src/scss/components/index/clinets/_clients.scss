@@ -1,28 +1,29 @@
-@import "./variables";
+@use "./variables" as vars;
 
 .splide {
 	margin-top: 140px;
 	padding-left: 10px;
-	@include mobile {
-		padding-left: 16px;
-		padding-right: 16px;
-	}
 	&__title {
 		font-size: 40px;
 		font-weight: 600;
 		line-height: 1.5em;
 		text-transform: capitalize;
 		margin-bottom: 66px;
-		@include mobile {
+		@include vars.mobile {
 			font-size: 30px;
 		}
 	}
 	.container {
 		max-width: max-content;
+		@include vars.mobile {
+			padding-left: 16px !important;
+			padding-right: 16px !important;
+			max-width: 428px;
+		}
 	}
 	&__list {
 		gap: 30px;
-		@include mobile {
+		@include vars.mobile {
 			max-width: 396px;
 			// margin-top: 60px;
 			// gap: 20px;
@@ -34,7 +35,7 @@
 		flex-direction: column;
 		align-items: center;
 		padding: 10px 25px 35px 25px;
-		border: 1px solid $grey-border-cl;
+		border: 1px solid vars.$grey-border-cl;
 		border-radius: 1px;
 		text-align: center;
 
@@ -48,9 +49,9 @@
 		}
 		.text {
 			margin-top: 27px;
-			color: $grey-txt-cl;
+			color: vars.$grey-txt-cl;
 			line-height: 1.5em;
-			@include mobile {
+			@include vars.mobile {
 				margin-top: 8px;
 			}
 		}
@@ -72,7 +73,7 @@
 					line-height: 1.5em;
 				}
 			}
-			@include mobile {
+			@include vars.mobile {
 				margin-top: 32px;
 			}
 		}
@@ -83,19 +84,19 @@
 		flex-direction: row;
 		margin-top: 45px;
 		gap: 30px;
-		transition: transform $trans-anim;
+		transition: transform vars.$trans-anim;
 	}
 	&__arrow {
 		background: none;
 		border: 0;
 		opacity: 1;
-		transition: opacity $trans-anim;
+		transition: opacity vars.$trans-anim;
 		svg {
-			color: $black-cl;
+			color: vars.$black-cl;
 		}
 		&:disabled {
 			opacity: 0.3;
-			transition: opacity $trans-anim;
+			transition: opacity vars.$trans-anim;
 		}
 	}
 	&__arrow--prev svg {
@@ -104,7 +105,7 @@
 	&__arrow--next svg {
 		transform: rotate(180deg);
 	}
-	@include mobile {
+	@include vars.mobile {
 		&__arrows {
 			display: none;
 		}
