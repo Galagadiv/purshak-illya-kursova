@@ -60,10 +60,10 @@ gulp.task("sass", function () {
 gulp.task("images", function () {
 	return gulp
 		.src("./src/images/**/*", {encoding: false})
-		.pipe(gulp.dest("./dist/images/"))
-		.on("data", function (file) {
-			console.log(`${file.path}: ${file.stat.size} bytes`);
-		});
+		.pipe(gulp.dest("./dist/images/"));
+	// .on("data", function (file) {
+	// 	console.log(`${file.path}: ${file.stat.size} bytes`);
+	// });
 });
 
 gulp.task("server", function () {
@@ -94,7 +94,8 @@ gulp.task("clean", function (done) {
 gulp.task("watch", function () {
 	gulp.watch("./src/scss/**/*.scss", gulp.parallel("sass"));
 	gulp.watch("./src/**/*.html", gulp.parallel("html"));
-	gulp.watch("./images/**/*", gulp.parallel("images"));
+	gulp.watch("./src/js/**/*.js", gulp.parallel("js"));
+	gulp.watch("./src/images/**/*", gulp.parallel("images"));
 });
 
 gulp.task(

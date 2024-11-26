@@ -70,6 +70,7 @@
 	@include vars.mobile {
 		.container {
 			flex-direction: column;
+			max-width: 428px !important;
 		}
 		&__title {
 			font-size: 24px;

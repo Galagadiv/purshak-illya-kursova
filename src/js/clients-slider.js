@@ -17,7 +17,7 @@ if (window.innerWidth >= 1440) {
 }
 
 var clientSlider = new Splide("#clientsSliderSection", {
-	type: "slide",
+	type: "slider",
 	focus: "left",
 	pagination: false,
 	breakpoints: {
