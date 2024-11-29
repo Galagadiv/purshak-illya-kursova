@@ -6,8 +6,6 @@ const clientsCont = document.getElementById("client");
 
 // Значення відступу на інший елемент
 const computedStyle = window.getComputedStyle(sourceElement);
-// projCont.style.marginLeft = computedStyle.marginLeft;
-// clientsCont.style.marginLeft = computedStyle.marginLeft;
 
 if (window.innerWidth >= 1440) {
 	// Отримуємо значення відступу
