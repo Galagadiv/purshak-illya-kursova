@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Agency website</title>
+		<link rel="stylesheet" href="./css/splide.min.css" />
+		<link rel="stylesheet" href="./css/aos.css" />
+		<link rel="stylesheet" href="./css/modern-normalize.css" />
+
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- header bulid as one -->
+		@@include('blocks/header/header.html')
+		<!-- //main build as many -->
+		@@include('blocks/main/main.html')
+		<!-- //footer bulid as one -->
+		@@include('blocks/footer/footer.html')
+
+		<div class="mob-menu" mob-menu>
+			<button class="mob-menu__close-btn" mob-menu-close>&times;</button>
+			<nav class="mob-menu__nav">
+				<ul class="mob-menu__nav-list">
+					<li class="mob-menu__nav-list__item">
+						<a href="index.html" class="mob-menu__nav-list__item__link">
+							Home
+						</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="portfolio.html" class="mob-menu__nav-list__item__link">
+							About
+						</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="#" class="mob-menu__nav-list__item__link">Work</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="#" class="mob-menu__nav-list__item__link">Pricing</a>
+					</li>
+					<li class="mob-menu__nav-list__item">
+						<a href="#" class="mob-menu__nav-list__item__link">Blog</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="backdrop" data-modal>
+			<div class="backdrop__modal">
+				<button class="backdrop__modal__close-btn" data-modal-cls>
+					&times;
+				</button>
+				<h2 class="backdrop__modal__title">
+					Leave your details, we will call you back
+				</h2>
+				<form class="backdrop__modal__form">
+					<div class="backdrop__modal__form__item">
+						<label for="user_name" class="backdrop__modal__form__item__label"
+							>First Name
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="text"
+								id="user_name"
+								name="name"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+
+							<svg class="backdrop__modal__form__icon" width="12" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img1"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="backdrop__modal__form__item">
+						<label for="user_name" class="backdrop__modal__form__item__label"
+							>Second Name
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="text"
+								id="user_name"
+								name="name"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+
+							<svg class="backdrop__modal__form__icon" width="12" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img1"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="backdrop__modal__form__item phone">
+						<div>
+							<label for="phone-code" class="phone-code-label"
+								>Pick a code:</label
+							>
+							<select
+								id="phone-code"
+								name="phone-code"
+								class="phone-code-list"
+								required
+							>
+								<option value="+380">UA (+380)</option>
+								<option value="+1">US (+1)</option>
+								<option value="+44">UK (+44)</option>
+								<option value="+49">GR (+49)</option>
+								<option value="+33">FR (+33)</option>
+								<option value="+39">IT (+39)</option>
+								<option value="+86">CH (+86)</option>
+								<option value="+81">JP (+81)</option>
+								<option value="+91">IND (+91)</option>
+							</select>
+						</div>
+						<div class="phone__input-cont">
+							<label
+								for="user_phone_num"
+								class="backdrop__modal__form__item__label"
+								>Phone number
+							</label>
+							<div class="backdrop__modal__form__input-container">
+								<input
+									type="tel"
+									id="user_phone_num"
+									name="phone_num"
+									class="backdrop__modal__form__input-container__input"
+									required
+								/>
+								<svg class="backdrop__modal__form__icon" width="13" height="13">
+									<use
+										href="./images/social/social-icons.svg#icon-modal-img2"
+									></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="backdrop__modal__form__item">
+						<label for="user_mail" class="backdrop__modal__form__item__label"
+							>Email
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="email"
+								id="user_mail"
+								name="mail"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+							<svg class="backdrop__modal__form__icon" width="15" height="12">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img3"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="backdrop__modal__form__item">
+						<label
+							for="user_phone_num"
+							class="backdrop__modal__form__item__label"
+							>Organisation
+						</label>
+						<div class="backdrop__modal__form__input-container">
+							<input
+								type="tel"
+								id="user_phone_num"
+								name="phone_num"
+								class="backdrop__modal__form__input-container__input"
+								required
+							/>
+							<svg class="backdrop__modal__form__icon" width="13" height="13">
+								<use
+									href="./images/social/social-icons.svg#icon-modal-img2"
+								></use>
+							</svg>
+						</div>
+					</div>
+
+					<button type="submit" class="backdrop__modal__form__send-btn">
+						Submit
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<script src="../js/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+
+		<script src="../js/mob-menu.js"></script>
+
+		<script src="../js/form.js"></script>
+
+		<script src="../js/value.js"></script>
+
+		<script src="../js/splide.min.js"></script>
+
+		<script src="../js/clients-slider.js"></script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+$green-cl: #19ce67 !default;
+$pink-cl: #ce1980 !default;
+$black-cl: #000000 !default;
+$grey-border-cl: #e4e4e4 !default;
+$grey-txt-cl: #333333 !default;
+$lt-wh-cl: #f4f3f2 !default;
+$white-cl: #ffffff !default;
+$poppins-font: "Poppins", sans-serif !default;
+$trans-anim: 0.5s ease !default;
+
+@mixin mobile {
+	@media screen and (min-width: 300px) and (max-width: 1439.9px) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media screen and (min-width: 1440px) {
+		@content;
+	}
+}

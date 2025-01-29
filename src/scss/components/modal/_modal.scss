@@ -1,0 +1,233 @@
+@use "./variables" as vars;
+
+.backdrop {
+	display: none;
+	position: fixed;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+
+	opacity: 0;
+	transition: opacity vars.$trans-anim;
+	&__modal {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		background-color: white;
+		padding: 40px;
+		width: 528px;
+		border-radius: 8px;
+		&__close-btn {
+			position: absolute;
+			top: 8px;
+			right: 8px;
+			background: none;
+			border: 0;
+			width: 30px;
+			height: 30px;
+			font-size: 30px;
+			line-height: 1em;
+			color: vars.$black-cl;
+			transition: color vars.$trans-anim;
+			&:hover {
+				color: vars.$green-cl;
+				transition: color vars.$trans-anim;
+			}
+		}
+		&__title {
+			font-weight: 700;
+			color: vars.$black-cl;
+			font-size: 20px;
+			text-align: center;
+			margin-bottom: 12px;
+		}
+		&__form {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			&__input-container {
+				position: relative;
+				&__input {
+					width: 100%;
+					height: 40px;
+					padding-inline-start: 10px;
+					outline: 1px solid rgba(0, 0, 0, 0.1);
+					border: 0;
+					border-radius: 4px;
+					transition: outline vars.$trans-anim;
+					font-size: 15px;
+					&:focus,
+					&:hover {
+						outline: 1px solid vars.$green-cl;
+						transition: outline vars.$trans-anim;
+					}
+				}
+			}
+			&__icon {
+				position: absolute;
+				left: 12px;
+				top: 50%;
+				transform: translateY(-50%);
+				pointer-events: none;
+				color: vars.$grey-border-cl;
+				transition: color vars.$trans-anim;
+			}
+
+			&__input-container__input:hover + &__icon,
+			&__input-container__input:focus + &__icon {
+				color: vars.$green-cl;
+				transition: color vars.$trans-anim;
+			}
+			&__textarea-container__textarea {
+				width: 100%;
+				height: 120px;
+				padding: 12px 16px;
+				outline: 1px solid rgba(0, 0, 0, 0.1);
+				border: 0;
+				border-radius: 4px;
+				resize: none;
+				transition: outline vars.$trans-anim;
+				font-size: 12px;
+				letter-spacing: 0.01em;
+				line-height: auto;
+
+				&:focus,
+				&:hover {
+					outline: 1px solid vars.$green-cl;
+					transition: outline vars.$trans-anim;
+				}
+			}
+			&__item + &__item {
+				margin-top: 10px;
+			}
+			&__item {
+				&__label {
+					display: block;
+					text-align: left;
+					font-size: 12px;
+					letter-spacing: 0.01em;
+					color: vars.$black-cl;
+					margin-bottom: 4px;
+				}
+			}
+
+			&__agree-line {
+				display: flex;
+				align-items: center;
+				margin-top: 20px;
+				margin-bottom: 30px;
+				align-self: center;
+
+				&__checkbox {
+					// display: none;
+					border: 1px solid vars.$black-cl;
+					margin-right: 5px;
+					width: 20px;
+					height: 20px;
+					padding: 0 2px 2px 2px;
+					appearance: none;
+					color: white;
+					border-radius: 2px;
+
+					&:hover {
+						cursor: pointer;
+					}
+					&:checked + .custom-checkbox svg {
+						display: block;
+					}
+					&:checked {
+						background: vars.$green-cl;
+						border: none;
+						color: vars.$white-cl;
+					}
+					&:checked::before {
+						content: "✔";
+						width: 16px;
+						height: 16px;
+						line-height: 1em;
+						display: inline-block;
+						text-align: center;
+					}
+				}
+				&__link {
+					color: vars.$green-cl;
+					font-size: 14px;
+					margin-left: 4px;
+					line-height: 1.71em;
+					text-decoration: underline vars.$green-cl;
+				}
+				&__text {
+					font-size: 14px;
+					color: vars.$black-cl;
+					margin: 0;
+					line-height: 1.71em;
+				}
+				&__text:hover {
+					cursor: pointer;
+				}
+			}
+
+			&__send-btn {
+				padding: 10px 52px;
+				background-color: vars.$pink-cl;
+				border-radius: 4px;
+				border: none;
+				align-self: center;
+				font-weight: 700;
+				font-family: vars.$poppins-font;
+				color: vars.$white-cl;
+				font-size: 16px;
+				line-height: 1.875;
+				letter-spacing: 0.06em;
+				transition: box-shadow vars.$trans-anim;
+				margin-top: 15px;
+				&:hover {
+					box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+					transition: box-shadow vars.$trans-anim;
+				}
+			}
+		}
+		.phone {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			&-code-label {
+				text-align: left;
+				font-size: 12px;
+				letter-spacing: 0.01em;
+				color: #000;
+				margin-bottom: 4px;
+			}
+			&-code-list {
+				display: block;
+				text-align: left;
+				padding: 10px 5px;
+				font-size: 15px;
+				letter-spacing: 0.01em;
+				color: #000;
+				margin-right: 20px;
+				height: 40px;
+
+				outline: 1px solid rgba(0, 0, 0, 0.1);
+				border-radius: 4px;
+				border: 0;
+			}
+			&__input-cont {
+				width: 100%;
+			}
+		}
+	}
+}
+.visible {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: auto;
+}

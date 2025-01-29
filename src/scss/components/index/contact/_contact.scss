@@ -1,0 +1,49 @@
+@use "./variables" as vars;
+
+.contact {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 80px 0 50px;
+
+		background-color: vars.$green-cl;
+		@include vars.mobile {
+			padding: 40px 39px 50px;
+			border-radius: 8px;
+		}
+	}
+
+	&__title {
+		font-size: 40px;
+		color: vars.$white-cl;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		line-height: 1.5em;
+
+		flex-wrap: wrap;
+		text-align: center;
+		@include vars.mobile {
+			font-size: 28px;
+		}
+	}
+	&__button {
+		display: flex;
+		align-content: center;
+
+		margin-top: 36px;
+		padding: 20px 40px;
+		background-color: vars.$pink-cl;
+		border: 0;
+		border-radius: 8px;
+		gap: 10px;
+
+		color: vars.$white-cl;
+		font-size: 24px;
+		font-weight: 400;
+		line-height: 1;
+	}
+	@include vars.mobile {
+		padding: 0 16px;
+	}
+}

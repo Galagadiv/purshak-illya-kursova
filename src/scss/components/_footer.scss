@@ -1,0 +1,178 @@
+@use "./variables" as vars;
+
+.fter {
+	.container {
+		// display: flex;
+		padding: 34px 0;
+	}
+
+	&__main {
+		display: flex;
+		align-items: center;
+		&__logo-block {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			max-width: 312px;
+			margin-right: 180px;
+
+			&__text {
+				display: inline-flex;
+				flex-wrap: wrap;
+				margin-top: 40px;
+				font-family: vars.$poppins-font;
+				color: vars.$green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+			}
+			&__text-container {
+				display: none;
+				flex-direction: column;
+				margin-top: 40px;
+				gap: 8px;
+
+				.text-title {
+					font-family: vars.$poppins-font;
+					color: vars.$green-cl;
+					letter-spacing: 0em;
+					font-weight: 600;
+					font-size: 28px;
+				}
+
+				.text-subtitle {
+					font-family: vars.$poppins-font;
+					color: vars.$green-cl;
+					letter-spacing: 0em;
+					font-size: 18px;
+					font-weight: 300;
+				}
+			}
+			@include vars.mobile {
+				align-items: flex-start;
+				margin-bottom: 45px;
+				margin-right: 0;
+				svg {
+					display: none;
+				}
+				&__text {
+					display: none;
+				}
+				&__text-container {
+					display: flex;
+				}
+			}
+		}
+		&__sup-list {
+			margin-right: 100px;
+			&__item__title {
+				font-family: vars.$poppins-font;
+				color: vars.$green-cl;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 0em;
+
+				margin-bottom: 23px;
+			}
+			&__item__link {
+				display: inline-flex;
+
+				font-family: vars.$poppins-font;
+				color: vars.$green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+				margin-bottom: 16px;
+				flex-wrap: nowrap;
+			}
+		}
+		&__soc-list {
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+			margin-right: 100px;
+			&__item__title {
+				font-family: vars.$poppins-font;
+				color: vars.$green-cl;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 0em;
+
+				margin-bottom: 23px;
+			}
+			&__item__link {
+				display: inline-flex;
+
+				font-family: vars.$poppins-font;
+				color: vars.$green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+				margin-bottom: 16px;
+				flex-wrap: nowrap;
+			}
+		}
+		&__cont-list {
+			&__item__title {
+				font-family: vars.$poppins-font;
+				color: vars.$green-cl;
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 0em;
+
+				margin-bottom: 23px;
+			}
+			&__item__link {
+				display: inline-flex;
+
+				font-family: vars.$poppins-font;
+				color: vars.$green-cl;
+				font-size: 18px;
+				font-weight: 300;
+				letter-spacing: 0em;
+				margin-bottom: 16px;
+				flex-wrap: nowrap;
+			}
+		}
+	}
+	&__lists {
+		display: flex;
+		align-items: baseline;
+	}
+	&__afterword {
+		display: flex;
+		gap: 34px;
+		justify-content: center;
+		margin-top: 40px;
+		p {
+			font-family: vars.$poppins-font;
+			color: vars.$green-cl;
+			font-size: 20px;
+			font-weight: 400;
+			letter-spacing: 0em;
+		}
+	}
+	@include vars.mobile {
+		.container {
+			padding: 0 16px;
+		}
+		&__main {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-bottom: 60px;
+			border-bottom: 2px solid vars.$black-cl;
+		}
+		&__lists {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__afterword {
+			flex-direction: column;
+			gap: 12px;
+			align-items: center;
+			padding-top: 40px;
+			padding-bottom: 20px;
+		}
+	}
+}

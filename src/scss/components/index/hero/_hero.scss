@@ -1,0 +1,105 @@
+@use "./variables" as vars;
+
+.hero {
+	padding: 50px 0;
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	&__text-cont {
+		display: flex;
+		flex-direction: row;
+		&__title {
+			flex-wrap: wrap;
+			font-size: 48px;
+			font-weight: 700;
+			line-height: 1.5em;
+			max-width: 495px;
+			margin-right: 95px;
+		}
+		&__text {
+			flex-wrap: wrap;
+			font-weight: 400;
+			line-height: 1.5em;
+			margin-bottom: 35px;
+		}
+		&__button {
+			display: flex;
+
+			padding: 15px 32px;
+			max-width: 240px;
+			border: 0;
+			border-radius: 8px;
+			background-color: vars.$green-cl;
+			transition: background-color vars.$trans-anim;
+
+			text-transform: capitalize;
+			font-size: 20px;
+			font-family: vars.$poppins-font;
+			font-weight: 600;
+			line-height: 1em;
+
+			color: vars.$white-cl;
+			svg {
+				color: vars.$white-cl;
+				margin-left: 10px;
+			}
+			&:hover {
+				transition: background-color vars.$trans-anim;
+				background-color: vars.$pink-cl;
+			}
+		}
+		@include vars.mobile {
+			flex-direction: column;
+			margin-bottom: 30px;
+			&__title {
+				font-size: 24px;
+				max-width: 396px;
+				margin: 0;
+				margin-bottom: 24px;
+			}
+			&__text {
+				flex-wrap: wrap;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.5em;
+				max-width: 272px;
+				margin-bottom: 10px;
+			}
+			&__button {
+				display: flex;
+
+				padding: 9px 28px;
+				// max-width: 188px;
+
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 1.5em;
+			}
+		}
+	}
+	&__img-cont {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		// Left
+		img {
+			border: 15px solid vars.$black-cl;
+			border-radius: 8px;
+		}
+		@include vars.mobile {
+			img {
+				border: 3px solid vars.$black-cl;
+				border-radius: 8px;
+			}
+			&-l {
+				max-width: 133px;
+				height: auto;
+			}
+			&-r {
+				max-width: 233px;
+				height: auto;
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@use "./variables" as vars;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+	margin: 0;
+	color: vars.$black-cl;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+}
+
+body {
+	font-family: vars.$poppins-font;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 0em;
+	line-height: 1;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	max-width: 428px;
+	padding: 0 16px;
+	margin-left: auto;
+	margin-right: auto;
+	@include vars.desktop {
+		max-width: 1200px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+button {
+	cursor: pointer;
+}
+
+section {
+	overflow-x: hidden;
+}
+
+.view__link {
+	display: none;
+	justify-content: right;
+	margin-top: 20px;
+	a {
+		color: vars.$green-cl;
+		font-size: 24px;
+		line-height: 1.25em;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+	@include vars.mobile {
+		display: flex;
+	}
+}

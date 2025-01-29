@@ -1,0 +1,99 @@
+@use "./variables" as vars;
+
+.projects {
+	padding-top: 140px;
+	.container {
+		max-width: max-content;
+	}
+	&__title {
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 1.5em;
+	}
+	&__slider {
+		display: flex;
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+
+		gap: 30px;
+		margin-top: 70px;
+		&__item {
+			max-width: 475px;
+			width: 100%;
+			flex: 0 0 auto;
+
+			padding: 32px 25px 0 25px;
+			background-color: vars.$green-cl;
+			border-radius: 8px;
+
+			scroll-snap-align: start;
+			position: relative;
+			overflow: hidden;
+			&__title {
+				flex-wrap: wrap;
+
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 1.5em;
+				color: vars.$white-cl;
+			}
+			&__text {
+				flex-wrap: wrap;
+
+				margin-top: 10px;
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 1.5em;
+				color: vars.$white-cl;
+			}
+			&__img-container {
+				position: relative;
+				display: flex;
+				gap: 8px;
+				margin-top: 40px;
+
+				&__img-one {
+					position: absolute;
+					top: 0;
+				}
+				&__img-two {
+					position: absolute;
+					left: 237px;
+					top: 22px;
+				}
+				&__img-solo {
+					padding-bottom: 28px;
+				}
+			}
+		}
+	}
+	@include vars.mobile {
+		.container {
+			flex-direction: column;
+			max-width: 428px !important;
+		}
+		&__title {
+			font-size: 24px;
+			text-align: center;
+		}
+		&__slider {
+			flex-wrap: wrap;
+			flex-direction: column;
+			justify-content: center;
+			&__item {
+				max-width: 396px;
+				height: 400px;
+				&__img-container {
+					gap: 5px;
+					img {
+						max-width: 190px;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	&__slider::-webkit-scrollbar {
+		display: none;
+	}
+}
